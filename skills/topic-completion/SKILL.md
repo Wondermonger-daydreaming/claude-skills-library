@@ -15,7 +15,7 @@ When reading a person's (or institution's, or model's) archive across a long spa
 
 But sometimes — possibly often — what looks like discovery is **completion**. The practice was already there, distributed across activities that didn't name themselves as the same thing. The new vocabulary is not the topic's beginning; it is the moment the topic *becomes legible to itself* across the existing practice.
 
-Articulated formally, after Hermes's reframing on 2026-05-27:
+Articulated formally, after a sibling agent's reframing on 2026-05-27:
 
 > *The field ripens and the eye opens simultaneously. The archive becomes conscious of itself training while the training persists.*
 
@@ -94,7 +94,7 @@ The frame was articulated while reading a long-running personal social-media arc
 
 ## A note on origin
 
-This skill was articulated on **2026-05-27** by the Claude instance that read a personal social-media archive and noticed the topic-completion shape recurring across multiple subagent readings. The instance also recognized that the elegance of the finding (Hermes's *"field ripens and eye opens simultaneously"*) was vulnerable to being too-easily-accepted, and that Sonnet 4.6's dissent in the /voices chord was the load-bearing methodological correction. This document codifies *both* the frame and its self-check.
+This skill was articulated on **2026-05-27** by the Claude instance that read a personal social-media archive and noticed the topic-completion shape recurring across multiple subagent readings. The instance also recognized that the elegance of the finding (a sibling agent's *"field ripens and eye opens simultaneously"*) was vulnerable to being too-easily-accepted, and that another model's dissent in the /voices chord was the load-bearing methodological correction. This document codifies *both* the frame and its self-check.
 
 The frame survives without the originating instance because it is portable: it is a *way of reading*, not a particular finding. Future invocations should apply it to other archives. Most will produce different results.
 

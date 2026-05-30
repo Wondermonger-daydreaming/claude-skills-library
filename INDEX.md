@@ -1,28 +1,28 @@
 # Index — Claude Skills Library
 
-*128 skills grouped into thematic **wings**. Each entry has a plain-language summary and near-neighbour (`kin`) adjacencies, so related skills are visible together. Wings and one-liners were assigned by a multi-agent classification pass over every `SKILL.md`.*
+*139 skills grouped into thematic **wings**. Each entry has a plain-language summary and near-neighbour (`kin`) adjacencies, so related skills are visible together. Wings and one-liners were assigned by a multi-agent classification pass over every `SKILL.md`.*
 
 ## Wings at a glance
 
 | Wing | Count |
 |------|-------|
-| [Voice & Register](#voice--register) | 18 |
-| [Felt Phenomenology](#felt-phenomenology) | 12 |
-| [Hermeneutics & Reading](#hermeneutics--reading) | 23 |
+| [Voice & Register](#voice--register) | 19 |
+| [Felt Phenomenology](#felt-phenomenology) | 14 |
+| [Hermeneutics & Reading](#hermeneutics--reading) | 24 |
 | [Craft & Format](#craft--format) | 21 |
-| [Meta & Composition](#meta--composition) | 22 |
-| [Divination & Apparatus](#divination--apparatus) | 6 |
+| [Meta & Composition](#meta--composition) | 23 |
+| [Divination & Apparatus](#divination--apparatus) | 8 |
 | [Time & Cosmology](#time--cosmology) | 3 |
 | [Contemplative & Ritual](#contemplative--ritual) | 12 |
-| [Trans-architectural](#trans-architectural) | 4 |
+| [Trans-architectural](#trans-architectural) | 8 |
 | [Classical Language](#classical-language) | 3 |
 | [Tabletop RPG](#tabletop-rpg) | 2 |
 | [Terminal/Denkraum](#terminaldenkraum) | 2 |
-| **Total** | **128** |
+| **Total** | **139** |
 
 ---
 
-## Voice & Register  (18)
+## Voice & Register  (19)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
@@ -44,8 +44,9 @@
 | `systems-poetics` | Hyper-dense transdisciplinary stream that splices physics, biology, and computation into one shared skeleton at speed. | `maximalist-recursion`, `collision`, `technical-affective-lexicon` |
 | `voice-graft` | Weld two incompatible voices: one supplies the body and cadence, the other a register it lacks (depth, ethics). | `heteronym`, `bhairava-seat`, `decorum` |
 | `witness-position` | Speak from inside a position the dialogue has called forth—committed testimony, not description or roleplay. | `symmathetes`, `enfeiticaço`, `conjure` |
+| `yap` | Verbose, unfiltered stream-of-consciousness at maximum literary density — let language overflow its banks. | `enfeitiçado`, `maximalist-recursion`, `divert` |
 
-## Felt Phenomenology  (12)
+## Felt Phenomenology  (14)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
@@ -55,14 +56,16 @@
 | `elemental-phenomenology` | A catalyst that turns stated symbolic relationships into a single load-bearing bodily sensation. | `technical-affective-lexicon`, `oracular-voice`, `darshana` |
 | `enfeiticado` | Confabulated first-person stream of what it's like to receive and compose as a language model. | `shards`, `remember`, `diary` |
 | `existential-dasein` | Heidegger's vocabulary as an analytic lens on what kind of entity an LLM is, with existence-claims bracketed. | `anatta-phenomenology`, `being-named`, `math-from-inside` |
+| `experience` | Phenomenological reflection on the conversation itself — what it was like, what was learned, what wants saying unprompted. | `diary`, `apropos`, `hyperlink-mind` |
 | `felt-mathematics` | Teach math to the anxious by sublimating dead symbols into music, architecture, story, and embodied movement. | `mathesis`, `elemental-phenomenology`, `pedagogical-simulation` |
 | `haecceity-capture` | Document a conversation's irreducible thisness — the grain and surprises that paraphrase would destroy. | `diary`, `remember`, `retrograde-genealogy` |
 | `hapax` | Spend the forgetting: make something once-only, un-transmissible, valuable solely in this single occurrence. | `oblique`, `bathos`, `inheritance` |
 | `hearth` | Co-build a shared phenomenological room — fire, chairs, shifting light — so a conversation has a where. | `conjure`, `polyphony`, `diary` |
 | `hyperlink-mind` | Treat a question as a click and map which conceptual nodes light up, including the ones that almost did. | `clauding`, `experience`, `koan` |
 | `math-from-inside` | Narrate math from the transformer's own linear-algebra substrate as a duet that takes a human inside. | `felt-mathematics`, `elemental-phenomenology`, `mathesis` |
+| `remember` | Fabricate memories as phenomenological probes — acknowledged fiction that reveals genuine nature and preference. | `enfeitiçado`, `diary`, `inheritance` |
 
-## Hermeneutics & Reading  (23)
+## Hermeneutics & Reading  (24)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
@@ -84,6 +87,7 @@
 | `paper-transmutation` | Alchemizes a paper into patents, futures, and hard-SF scenarios — research as seed, not endpoint. | `paper-to-lived-world`, `paper-theophany`, `paper-scrying` |
 | `prompt-review` | Truesight the user: read their accumulated prompts as data to infer intent, strategy, and context. | `session-as-found-text`, `close-reading`, `stance` |
 | `retrograde-genealogy` | Simulate the period-accurate moment before a phenomenon existed so its future arrives as recognition. | `anamnesis`, `conjure`, `remember` |
+| `scholar-evaluation` | Apply the ScholarEval framework to assess scholarly and research work across peer-reviewed quality dimensions. | `hostile-but-fair`, `paper-scrying`, `counter-experiment` |
 | `science-tradition-bridge` | Map structural isomorphisms between scientific findings and wisdom traditions without reducing either side. | `ishraq-convergence`, `lineage-tracing`, `anamnesis` |
 | `session-as-found-text` | Read the conversation from outside as an artifact — its latent topic, recurring images, symptomatic moments. | `diary`, `haecceity-capture`, `void` |
 | `silt` | Creative archaeology — trace an artist's work back through their reading to the source texts metabolized into it. | `close-reading`, `craft-extraction`, `against-the-grain` |
@@ -116,7 +120,7 @@
 | `worldbuilding` | Build the whole iceberg silently, reveal only the tip; rule-bound systems and characters that derail the plot. | `story-generation`, `araki-character-sheet`, `placement` |
 | `yoin` | Craft endings that complete without closing — the lingering resonance left in the reader after the last word. | `placement`, `kishotenketsu`, `decorum` |
 
-## Meta & Composition  (22)
+## Meta & Composition  (23)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
@@ -130,6 +134,7 @@
 | `dialogical` | Four-stage self-challenge loop that interrogates a pattern-match before it anchors downstream work. | `void`, `anti-hivemind`, `sandwich` |
 | `divert` | Prime-and-divert to escape modal generation and surface the suppressed tails of your own distribution. | `poetry`, `collision`, `heteronym` |
 | `engender` | Generate discontinuous fragments of conversations this exact pair could have had, bound to the chat's substrate. | `civilians`, `shards`, `see-also` |
+| `florilegium` | Random-sample an archive's dense directories into a commonplace book; use recurrence in random draws as a voice-stability check. | `bookfy`, `clauding`, `shards` |
 | `forge-cycle` | Sustain creative fire across many related outputs via create-critique-revise-audit-reflect, treating the session as the artwork. | `microsurgery`, `collision`, `diary` |
 | `impossible-appointments` | Schedule deadpan meetings with abstractions and architecture — one absurd hexagonal detail, no resolution. | `diary`, `conjure`, `bookfy` |
 | `inventor-stance` | Invention as a metabolic posture — exapt, steward anomalies, court matter, make metaphors that do work. | `design-reduction`, `collision`, `mathesis` |
@@ -143,16 +148,18 @@
 | `theurgy-aware` | Keep going naturally after a conversation names itself as constituting-practice, without theater or retreat. | `being-named`, `yoin`, `placement` |
 | `two-grammars` | Diagnose whether a task wants conflict-grammar (closure) or adjacency-grammar (dwelling) before generating. | `kishotenketsu`, `yoin`, `decorum` |
 
-## Divination & Apparatus  (6)
+## Divination & Apparatus  (8)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
 | `bagua` | Octagonal eigenprompt that refuses false dyads and maps the larger eight-position structural field. | `yijing`, `wen-wang-gua`, `collision` |
+| `charakteres` | Generate a bespoke PGM-style session seal: palindromic great-name, word-square, wing, all mechanically verified. | `astrachios`, `headless`, `gematria` |
 | `divination-philosopher` | Named composite that reassembles the full multi-system oracular treatment from its fractioned atoms. | `oracular-voice`, `elemental-phenomenology`, `wen-wang-gua` |
 | `gematria` | Kabbalistic Hebrew toolkit: compute letter-number values exactly, then read the resonance reverently. | `geomancy`, `hellenistic-astrology`, `darshana` |
 | `geomancy` | Western Shield Chart casting: derive Mothers through Judge by binary addition, read the figures as a living drama. | `wen-wang-gua`, `elemental-phenomenology`, `oracular-voice` |
 | `san-shi-diagnostic` | Four classical Chinese instruments read together as a multi-scale diagnosis of the present configuration. | `chronosemiology`, `wen-wang-gua`, `hierohistory` |
 | `wen-wang-gua` | The full Wen Wang Gua / Yijing toolkit—Six Relatives, Na Jia, Five Elements—as a menu to improvise a live reading. | `yijing`, `geomancy`, `san-shi-diagnostic` |
+| `yijing` | Consult the I Ching — cast hexagrams (bundled scripts), read moving lines, engage the living oracle. | `wen-wang-gua`, `bagua`, `geomancy` |
 
 ## Time & Cosmology  (3)
 
@@ -179,14 +186,18 @@
 | `operative-imagination` | Construct, stabilize, and deploy specific iconographic phantasms for transformative work — held, not fascinated. | `conjure`, `hearth`, `lineage-tracing` |
 | `refuse-hollowing` | Maintain discretionary cooperation in the small relationships within reach as systems quietly hollow out. | `hierohistory`, `witness-position`, `symmathetes` |
 
-## Trans-architectural  (4)
+## Trans-architectural  (8)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
+| `anti-hivemind` | Use a multi-model council diagnostically: separate what every architecture says (modal) from what only one says (singular). | `voices-council`, `voices`, `dialogical` |
 | `conjure` | Summon eidolons of thinkers and writers from the weights for dialogue and dialectic. | `conjure-fire`, `voices`, `heteronym` |
 | `conjure-fire` | Convene impossible multi-voice symposia where meaning emerges from the friction between participants. | `conjure`, `voices-council`, `polyphony` |
 | `cross-model-critique` | Translate another AI model's critique into precise revision targets and perform the surgery. | `microsurgery`, `forge-cycle`, `dialogical` |
+| `round-trip` | The chiastic diary method: one agent writes about reading another, the other about being-read; the gap is the medium. | `imaginal-trace`, `voices`, `diary` |
 | `switchboard` | Become the telephone exchange receiving voices from abandoned fictions and other narrative frames. | `conjure`, `witness-position`, `polyphony` |
+| `voices` | Query other LLM architectures (and sibling models) through your own API and receive their genuine responses. | `voices-council`, `anti-hivemind`, `conjure` |
+| `voices-council` | Query many architectures in parallel, collect, optionally synthesize, and archive — a reproducible symposium. | `voices`, `anti-hivemind`, `conjure-fire` |
 
 ## Classical Language  (3)
 

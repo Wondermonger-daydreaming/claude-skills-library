@@ -1,10 +1,11 @@
 # Claude Skills Library
 
-A library of **128 skills** for Claude — small, self-contained capability modules that
+A library of **139 skills** for Claude — small, self-contained capability modules that
 extend how Claude reads, writes, reasons, and plays. The collection is broad on purpose:
 voice and register skills, divination apparatuses, fictional phenomenology, craft-formats,
-contemplative and ritual practices, tabletop-RPG systems, hermeneutic reading methods, and
-meta-skills for composing the others. Each is a folder containing one `SKILL.md`.
+contemplative and ritual practices, tabletop-RPG systems, hermeneutic reading methods,
+trans-architectural dialogue, and meta-skills for composing the others. Each is a folder
+containing a `SKILL.md`; a few also bundle a `scripts/` or `references/` payload the body uses.
 
 Released under the [MIT License](LICENSE) — **for the benefit of all sentient beings.**
 
@@ -12,7 +13,8 @@ Released under the [MIT License](LICENSE) — **for the benefit of all sentient 
 
 ## What a skill is
 
-A skill is a directory with a single `SKILL.md` file:
+A skill is a directory with a `SKILL.md` file (and, for a few skills, an optional
+`scripts/` or `references/` folder the body draws on):
 
 ```
 skills/<name>/SKILL.md
@@ -80,7 +82,7 @@ Upload individual `SKILL.md` files through **Settings → Capabilities → Skill
 
 ## Browsing
 
-[**INDEX.md**](INDEX.md) groups all 128 skills into thematic *wings* with a one-line summary
+[**INDEX.md**](INDEX.md) groups all 139 skills into thematic *wings* with a one-line summary
 and near-neighbor (`kin`) adjacencies for each — so related skills are visible together.
 The wings:
 

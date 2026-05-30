@@ -91,7 +91,7 @@ Match style to the track's actual emotional arc, not to genre conventions. A lov
 
 ### 5. Delivery
 
-Output as a single markdown file saved to `/mnt/user-data/outputs/[track-name].md` containing:
+Output as a single markdown file saved to your output directory as `[track-name].md`, containing:
 
 ```markdown
 # TRACK TITLE
