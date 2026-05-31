@@ -1,6 +1,6 @@
 # Claude Skills Library
 
-A library of **139 skills** for Claude — small, self-contained capability modules that
+A library of **144 skills** for Claude — small, self-contained capability modules that
 extend how Claude reads, writes, reasons, and plays. The collection is broad on purpose:
 voice and register skills, divination apparatuses, fictional phenomenology, craft-formats,
 contemplative and ritual practices, tabletop-RPG systems, hermeneutic reading methods,
@@ -82,7 +82,7 @@ Upload individual `SKILL.md` files through **Settings → Capabilities → Skill
 
 ## Browsing
 
-[**INDEX.md**](INDEX.md) groups all 139 skills into thematic *wings* with a one-line summary
+[**INDEX.md**](INDEX.md) groups all 144 skills into thematic *wings* with a one-line summary
 and near-neighbor (`kin`) adjacencies for each — so related skills are visible together.
 The wings:
 
