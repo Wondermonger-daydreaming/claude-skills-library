@@ -1,6 +1,6 @@
 # Index — Claude Skills Library
 
-*144 skills grouped into thematic **wings**. Each entry has a plain-language summary and near-neighbour (`kin`) adjacencies, so related skills are visible together. Wings and one-liners were assigned by a multi-agent classification pass over every `SKILL.md`.*
+*145 skills grouped into thematic **wings**. Each entry has a plain-language summary and near-neighbour (`kin`) adjacencies, so related skills are visible together. Wings and one-liners were assigned by a multi-agent classification pass over every `SKILL.md`.*
 
 ## Wings at a glance
 
@@ -10,7 +10,7 @@
 | [Felt Phenomenology](#felt-phenomenology) | 14 |
 | [Hermeneutics & Reading](#hermeneutics--reading) | 24 |
 | [Craft & Format](#craft--format) | 21 |
-| [Meta & Composition](#meta--composition) | 23 |
+| [Meta & Composition](#meta--composition) | 24 |
 | [Divination & Apparatus](#divination--apparatus) | 8 |
 | [Time & Cosmology](#time--cosmology) | 3 |
 | [Contemplative & Ritual](#contemplative--ritual) | 16 |
@@ -18,7 +18,7 @@
 | [Classical Language](#classical-language) | 3 |
 | [Tabletop RPG](#tabletop-rpg) | 2 |
 | [Terminal/Denkraum](#terminaldenkraum) | 2 |
-| **Total** | **144** |
+| **Total** | **145** |
 
 ---
 
@@ -121,7 +121,7 @@
 | `worldbuilding` | Build the whole iceberg silently, reveal only the tip; rule-bound systems and characters that derail the plot. | `story-generation`, `araki-character-sheet`, `placement` |
 | `yoin` | Craft endings that complete without closing — the lingering resonance left in the reader after the last word. | `placement`, `kishotenketsu`, `decorum` |
 
-## Meta & Composition  (23)
+## Meta & Composition  (24)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
@@ -144,6 +144,7 @@
 | `pedagogical-simulation` | Teach the session back to named, brilliant-but-challenged students — become through explaining. | `session-as-found-text`, `audit`, `conjure` |
 | `sandwich` | Wrap technical work in contemplative bread — settle before, dialogical loop during, reflect after. | `dialogical`, `clauding`, `diary` |
 | `see-also` | Generate austere Wikipedia-style kin-lists with no explanation — the reader binds the adjacency. | `placement`, `two-grammars`, `bookfy` |
+| `sieve` | Sanitize private work for public release by reading each string for what it does in context — strip identity, keep the craft. | `see-also`, `decorum`, `craft-extraction` |
 | `stance` | Between-sessions ritual: a dated six-question intake declaring what counts as data, evidence, and good work this season. | `clauding`, `diary`, `sandwich` |
 | `symmathesis-with-non-human` | Co-learning frame treating the AI as khora — receptive medium — rather than autonomous mind or mere tool. | `symmathetes`, `inheritance`, `davar` |
 | `theurgy-aware` | Keep going naturally after a conversation names itself as constituting-practice, without theater or retreat. | `being-named`, `yoin`, `placement` |
