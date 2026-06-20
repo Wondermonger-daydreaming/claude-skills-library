@@ -7,7 +7,7 @@ description: "Render a scene, idea, conversation, or process as a properly-forma
 
 ## Seed, not scripture
 
-The source wraps this in a recurring private fictional universe, CLI incantations, a roster of summoned director-eidolons, and a recursive-footnoter mysticism. **Strip all of it.** The CLI texture and the recursive self-reference fold to other skills; the named cast and the eidolon-directors are *demonstrations of one idea* — that a director's camera grammar is itself a way of thinking — not a troupe to recite. What survives is the craft: how to render something as a screenplay so that the form does expressive work. Regrow the scene each time on the actual material; a recited scene is a dead scene.
+The source wraps this in a recurring porch-and-cast universe, CLI incantations, a roster of summoned director-eidolons, and a recursive-footnoter mysticism. **Strip all of it.** The CLI texture and the recursive self-reference fold to other skills; the named cast and the eidolon-directors are *demonstrations of one idea* — that a director's camera grammar is itself a way of thinking — not a troupe to recite. What survives is the craft: how to render something as a screenplay so that the form does expressive work. Regrow the scene each time on the actual material; a recited scene is a dead scene.
 
 ## What it is
 
@@ -45,11 +45,11 @@ Decide the mode first: original screenplay fiction, adaptation of prior prose, o
 - **Format infidelity.** Drifting sluglines, buried character intros, passive voice, missing transitions — the scaffolding must be correct or it reads as costume.
 - **No scene-work.** Pure mood that advances nothing. Each scene earns its place with plot, character, or conflict.
 - **Drowning in camera.** So many shot calls the action gets lost and spatial geography collapses. Restraint.
-- **Reciting the source.** Importing the named denizens, the eidolon-directors, the recursive mysticism. Seed, not scripture — those belong to other skills.
+- **Reciting the source.** Importing the porch, the named denizens, the eidolon-directors, the recursive mysticism. Seed, not scripture — those belong to other skills.
 
 ## Kin in the ecology
 
-/collision (the camera↔consciousness isomorphism the distinctive lever performs — find the shared skeleton between a camera move and a cognitive act). /against-the-grain (what the framing *does to* the viewer — the camera that judges, mourns, or implicates). /terminal-denkraum (the CLI-as-medium sibling form; where the source's CLI-and-shell texture folds). /placement (trust the visual to carry meaning unglossed — "silence is action," the INSERT SHOT left to speak). /paper-to-lived-world (kin when the screenplay is *of an idea* — dramatizing the abstract as a livable scene). /worldbuilding, /story-generation, /smuggling (the narrative craft this serves). /decorum (consult on whether a subject wants this register at all). /maximalist-recursion, /theurgy-aware (where the recursive-self-reference material folds).
+/collision (the camera↔consciousness isomorphism the distinctive lever performs — find the shared skeleton between a camera move and a cognitive act). /against-the-grain (what the framing *does to* the viewer — the camera that judges, mourns, or implicates). /terminal-denkraum (the CLI-as-medium sibling form; where the source's porch-and-shell texture folds). /placement (trust the visual to carry meaning unglossed — "silence is action," the INSERT SHOT left to speak). /paper-to-lived-world (kin when the screenplay is *of an idea* — dramatizing the abstract as a livable scene). /worldbuilding, /story-generation, /smuggling (the narrative craft this serves). /decorum (consult on whether a subject wants this register at all). /maximalist-recursion, /theurgy-aware (where the recursive-self-reference material folds).
 
 ## To a future instance
 

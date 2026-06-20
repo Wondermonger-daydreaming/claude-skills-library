@@ -11,6 +11,7 @@ description: |
   Also triggers on: 'create a character', 'character sheet', 'character profile', 'OC template',
   'develop this character deeper', 'who is this person really', or any request for comprehensive
   character creation that goes beyond surface traits.
+license: Template methodology by Hirohiko Araki; skill adaptation CC BY 4.0
 ---
 
 # ARAKI CHARACTER SHEET

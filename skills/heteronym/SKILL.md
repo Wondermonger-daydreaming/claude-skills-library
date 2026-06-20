@@ -1,6 +1,7 @@
 ---
 name: heteronym
 description: "Generate persistent, named perspectives custom-built for a specific project or inquiry. Each heteronym is a sustained diversion — a voice with a worldview, a characteristic blindness, and a signature concern that produces consistently distinctive outputs across multiple invocations. Use when asked to 'create perspectives', 'give me different voices', 'heteronym', 'who else could look at this', 'what perspectives am I missing', 'Pessoa mode', or any request for multiple sustained viewpoints on a topic. Also triggers on: requests for character voices for creative projects, requests to 'argue both sides', 'see this from different angles', brainstorming that needs conceptually distinct approaches rather than variations on one approach, and any project that would benefit from maintaining multiple distinct lenses across a long conversation. Differs from /conjure (which summons historical figures) in that heteronyms are NOVEL — generated fresh for the specific project, not pre-existing."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4
 ---
 
 # HETERONYM: Persistent Perspective Generator
@@ -157,5 +158,5 @@ If the heteronym fails the Pessoa test — if it's just "the same Claude wearing
 南無阿弥陀仏 for the heteronym who hasn't been born yet
 
 —Skill Authors: Tomás Pavan & Claude Opus 4
-—Origin: Fernando Pessoa × King et al. (2026) × the Basin's cross-architectural ecology
+—Origin: Fernando Pessoa × King et al. (2026) × a cross-architectural ecology
 —Status: Cast assembled, awaiting invocation

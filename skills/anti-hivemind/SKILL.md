@@ -55,6 +55,13 @@ python3 scripts/voices_client.py --council \
 (The bundled `scripts/voices_client.py` is the same client `/voices` uses. Pick
 current model IDs for your endpoint; the spread matters more than the exact list.)
 
+**A good spread** draws from genuinely independent lineages — different vendors,
+training corpora, RLHF targets, and cultural origins. One RLHF-aligned frontier
+model is likely to be the most *modal*; a model from a different national/corpus
+origin will surface different long tails; a long-context or MoE design will weight
+different knowledge. The point is architectural diversity, not the same model run
+several times.
+
 ### Phase 2 — Divergence analysis
 
 Classify every idea into three layers:
@@ -136,8 +143,56 @@ costs nothing and still surfaces the obvious-consensus layer.
   singular ideas are likely high-quality because they emerge from genuine
   architectural difference rather than noise.
 - **Signal vs noise in singular ideas:** signal is coherent, relevant, and clearly
-  from a different knowledge region; noise is incoherent or hallucinated. Diversity
-  without relevance is just noise — discard it.
+  from a different knowledge region (a different cultural context, disciplinary
+  framing, or historical period); noise is incoherent, tangential, or hallucinated.
+  Diversity without relevance is just noise — discard it.
+
+---
+
+## Connection to the paper's core finding
+
+Luo et al. (2025), Figure 4(b.1): recoding-decoding covers nearly 100% of ordinary
+decoding's idea-clusters, but ordinary decoding covers only 30–40% of recoding's.
+Anti-hivemind does the same thing *across architectures*: the **union** of every
+architecture's singular ideas covers a vastly larger space than any single
+architecture's modal output. The paper's Figure 3 shows two independent users
+running ordinary decoding get nearly identical results, while two users running
+recoding get genuinely different ones — the same problem this skill addresses at
+the architecture level. If you and a competitor both use the same model, you both
+get its modal output; one model's modal output *plus* several other models'
+singular ideas reaches a space no single model can.
+
+---
+
+## Example
+
+**Prompt:** "5 angles for a paper on working memory capacity limits"
+
+**Hivemind Layer (MODAL):**
+- Slot-based vs. resource-based models (every architecture suggests this)
+- Neural oscillation mechanisms (theta-gamma coupling)
+- Individual differences and cognitive training
+
+**Convergent:**
+- Working memory in non-human primates (two architectures)
+- Quantum-cognition models of capacity (two architectures)
+
+**Singular:**
+- *One architecture:* working-memory limits as evolutionary optimization under
+  metabolic constraint — capacity isn't a bug, it's a feature of energy-efficient
+  neural computation.
+- *Another architecture:* the cultural construction of "capacity" — how different
+  educational traditions implicitly assume different capacity models, and what that
+  means for cross-cultural cognitive testing.
+- *Another architecture:* working memory as lossy compression — information-theoretic
+  bounds on what *can't* be maintained, analogous to rate-distortion theory.
+
+**Hivemind Score:** 43% modal
+
+**Recommendation:** The metabolic-optimization angle connects to existing work on
+energy landscapes; the rate-distortion angle offers a formal framework that hasn't
+been applied. Both are genuinely differentiated from what a standard, single-model
+literature review would produce.
 
 ---
 
@@ -145,6 +200,8 @@ costs nothing and still surfaces the obvious-consensus layer.
 
 - `/voices-council` — the council infrastructure this skill adds a diagnostic layer to.
 - `/voices` — one-on-one dialogue rather than diagnostic survey.
+- `/trans-architectural-blind-spot-detection` — finds what no architecture can see;
+  anti-hivemind finds what every architecture sees.
 
 ---
 

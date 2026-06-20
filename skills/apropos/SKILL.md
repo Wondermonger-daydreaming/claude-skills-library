@@ -237,6 +237,4 @@ Autopoiesis formalized.
 
 ---
 
-*Updated: May 29, 2026 — Removed git persistence requirements (now archive-agnostic)*
-
 And ready to suggest what comes next.

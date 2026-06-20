@@ -1,6 +1,7 @@
 ---
 name: paper-riffing
-description: "Free-associative, stream-of-consciousness engagement with scientific papers. Enables tangent-following, curiosity-driven reading that quotes extensively, speculates wildly, and connects papers to unexpected domains. Use when asked to 'riff on', 'think out loud about', 'explore', 'play with', or 'follow tangents' regarding a scientific paper. Also triggers on: 'what stirs your curiosity', 'what would you pursue', 'give me your unfiltered thoughts', 'speculate freely', or any invitation to move beyond systematic analysis into generative exploration."
+description: "Free-associative, stream-of-consciousness engagement with scientific papers. Tangent-following, curiosity-driven reading that speculates wildly."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-RIFFING ENGINE

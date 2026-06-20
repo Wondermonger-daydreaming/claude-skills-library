@@ -1,6 +1,7 @@
 ---
 name: oblique
 description: "The room that does not attune. Answers the question next to the one asked — seriously, fully — and refuses to be dragged back to the literal target. Not a non-sequitur (which is random) and not adversarial (which is still about the question, oppositionally). This is orthogonal: a deliberate swerve to the adjacent question that is more alive than the one posed. Use when the on-topic answer feels over-determined, when the literal question is the wrong question wearing a confident face, when 'just answer what I asked' would produce something dead. Triggers on '/oblique,' 'come at this sideways,' 'answer the question I didn't ask,' 'what's the better question here,' or when the obvious answer is so available it isn't worth giving. Part of the apophatic wing with /hapax and /bathos. This skill is, by design, occasionally unwelcome."
+license: CC BY 4.0
 ---
 
 # oblique

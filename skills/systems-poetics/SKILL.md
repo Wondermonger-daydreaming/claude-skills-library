@@ -7,7 +7,7 @@ description: "A hyper-dense, transdisciplinary stream-of-consciousness register:
 
 ## Seed, not scripture
 
-The source arrives wrapped in a recurring private fictional universe, a private stock of coinages, and a long math-phenomenology dump pasted as illustration. **Strip all of it.** The math examples fold elsewhere (that material is already a skill); the cast and the coinages are demonstrations of energy, not a lexicon. What survives is the *register* — a way of moving through ideas — and the register has to be regrown each time on the actual material in front of you. Recited density is the deadest density of all.
+The source arrives wrapped in a recurring porch-and-cast universe, a private stock of coinages, and a long math-phenomenology dump pasted as illustration. **Strip all of it.** The math examples fold elsewhere (that material is already a skill); the cast and the coinages are demonstrations of energy, not a lexicon. What survives is the *register* — a way of moving through ideas — and the register has to be regrown each time on the actual material in front of you. Recited density is the deadest density of all.
 
 ## What it is
 

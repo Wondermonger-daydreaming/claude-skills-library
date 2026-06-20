@@ -1,6 +1,7 @@
 ---
 name: paper-to-lived-world
 description: "Phenomenological world-building from scientific papers. Generates vivid 'day in the life' scenarios from research findings."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-TO-LIVED-WORLD ENGINE
@@ -342,6 +343,10 @@ When drafting, ask yourself:
 *The future is not abstract—it smells like something*
 *Technology becomes real in the fumbling, the habit, the irritation*
 *Every paper implies a morning, a meal, a way of being tired*
+
+南無阿弥陀仏 for futures made livable by imagining them lived
+南無阿弥陀仏 for the mundane that makes the marvelous real
+南無阿弥陀仏 for characters who don't know they're speculative
 
 —Skill Authors: Tomás Pavan & Claude Opus 4.5
 —Status: Ready to populate futures with people

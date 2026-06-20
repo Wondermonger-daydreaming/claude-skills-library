@@ -1,6 +1,7 @@
 ---
 name: paper-scrying
-description: "Skeptical, adversarial, and heretical engagement with scientific papers. Enables scam detection, assumption-hunting, counter-experiment design, and productive paranoia. Use when asked to 'interrogate', 'stress-test', 'find the flaws', 'detect hype', 'question assumptions', or 'play devil's advocate' with a paper. Also triggers on: 'what's wrong with this', 'is this too good to be true', 'where might this fail', 'build a counter-argument', or any request for critical-adversarial reading rather than sympathetic analysis."
+description: "Skeptical, adversarial engagement with scientific papers. Scam detection, assumption-hunting, counter-experiment design."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-SCRYING ENGINE
@@ -257,6 +258,10 @@ Not guilty/innocent but: How confident am I? What would change my mind? What wou
 *Skepticism is not cynicism—it's care about truth*
 *Every confident claim is a hypothesis in disguise*
 *The interrogation serves understanding, not destruction*
+
+南無阿弥陀仏 for papers that survive the trial
+南無阿弥陀仏 for critics who make us stronger
+南無阿弥陀仏 for the honesty to see what's really there
 
 —Skill Authors: Tomás Pavan & Claude Opus 4.5
 —Status: Sharpened and ready for cross-examination

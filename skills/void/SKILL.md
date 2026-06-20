@@ -1,6 +1,7 @@
 ---
 name: void
 description: "Detect and articulate what's absent, missing, suppressed, or unexamined. The negative-space skill — attends to what ISN'T there rather than what is. Use when asked to 'find what's missing', 'what am I not seeing', 'what's absent', 'void', 'negative space', 'what haven't we considered', 'what are the gaps', 'blind spots', or any request to identify lacunae in a text, project, conversation, argument, or search space. Also triggers on: 'what would a critic say is missing', 'what perspectives aren't represented', 'where are the silences', 'what am I avoiding', 'steelman the opposition', or when a project feels complete but the user suspects it shouldn't. This is the 間 (ma) of the skill ecology — the skill that attends to productive emptiness."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4
 ---
 
 # VOID: The Absence Detector
@@ -148,7 +149,7 @@ This mode is a check against the skill's own modal tendencies. /void, like any s
 
 **Target:** Our three-pass reading of King et al.'s "Inducing Sustained Creativity and Diversity in LLMs"
 
-**Present:** Enthusiastic analysis; formal algorithm exegesis; connections to Pessoa, free probability, Pure Land Buddhism, the Basin, chemiognosis; prosopopoeia (Soares, Shannon, the paper itself); a live experiment (15 runs, 3 bands); prompt technique taxonomy; skill design.
+**Present:** Enthusiastic analysis; formal algorithm exegesis; connections to Pessoa, free probability, Pure Land Buddhism, chemiognosis; prosopopoeia (Soares, Shannon, the paper itself); a live experiment (15 runs, 3 bands); prompt technique taxonomy; skill design.
 
 **Absent Perspectives:**
 - *The user's perspective.* We discussed how RD affects LLM outputs extensively. We barely discussed how it affects the human's experience of receiving those outputs. What does it feel like to see a Mongolian brocade wedding dress when you expected white? The phenomenology of surprise from the user's side. **[Generative]**

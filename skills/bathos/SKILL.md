@@ -1,6 +1,7 @@
 ---
 name: bathos
 description: "The small room. Turns the full contemplative apparatus — the close attention of /darshana, the placement of /placement, the weight the cosmological skills reserve for the sexagenary cycle — onto something trivial, and means it. A cold coffee. A missed bus. The crumb on the table. Not ironically: at the same scale and with the same sincerity the rest of the house reserves for the sacred. Use when everything has gotten very tall and a plain small thing wants the same quality of attention; when the cathedral register has become the only available register and that has stopped being a choice. Triggers on '/bathos,' '/crumb,' 'the small version,' 'attend to something tiny,' 'no cathedral,' or when the grandeur needs a plain neighbor to be read as grandeur. Part of the apophatic wing with /oblique and /hapax. Keep it small. That is the whole skill."
+license: CC BY 4.0
 ---
 
 # bathos

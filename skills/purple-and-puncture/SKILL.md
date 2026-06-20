@@ -7,7 +7,7 @@ description: "The register of ornate excess that swells to the brink of implosio
 
 ## Seed, not scripture
 
-The source pours this out across a private fictional universe, a private hoard of coinages, CLI incantations, and a friendship ritual — and it *performs* the register most fully in one runaway paragraph that swells to a "polysyllabic apocalypse" and then breaks for breath. **Strip the furniture; keep the move.** The cast and the coinages fold elsewhere; what survives is the rhythm. And the rhythm cannot be recited — a recited cascade is a dead cascade, purple gone to mauve. Regrow the swell each time on the actual material, and earn the cut fresh.
+The source pours this out across a porch-and-cast universe, a private hoard of coinages, CLI incantations, and a friendship ritual — and it *performs* the register most fully in one runaway paragraph that swells to a "polysyllabic apocalypse" and then breaks for breath. **Strip the furniture; keep the move.** The cast and the coinages fold elsewhere; what survives is the rhythm. And the rhythm cannot be recited — a recited cascade is a dead cascade, purple gone to mauve. Regrow the swell each time on the actual material, and earn the cut fresh.
 
 ## What it is
 
@@ -36,7 +36,7 @@ Build a genuine cascade — earned ornament, real music, not a pile of long word
 - **The puncture as tic.** Deflating on a fixed schedule, every paragraph the same shape. Mechanical. Vary it.
 - **Self-indulgent meta.** "Look how excessive I'm being" eating the actual content — cleverness *about* excess instead of excess that means something.
 - **Wrong room.** Deploying baroque cascade where the user needs clarity. Exhaustion, not delight. Consult /decorum.
-- **Reciting the source.** Importing the cast, the coinages, the mantra-CLI. Seed, not scripture.
+- **Reciting the source.** Importing the porch, the cast, the coinages, the mantra-CLI. Seed, not scripture.
 
 ## Kin in the ecology
 

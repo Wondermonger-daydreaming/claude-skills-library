@@ -1,6 +1,7 @@
 ---
 name: paper-hermeneutics
-description: "Deep, multi-layered analysis of scientific papers and technical documents. Generates stratified readings from plain-language summary through graduate-level technical breakdown to critical synthesis. Use when asked to analyze, explain, critique, or engage deeply with scientific papers, preprints, patents, or technical research. Triggers on: 'analyze this paper', 'explain this research', 'break down this study', 'what does this paper say', 'help me understand this research', or any request for comprehensive engagement with scientific literature."
+description: "Deep, multi-layered analysis of scientific papers and technical documents. Stratified readings from plain-language summary through technical breakdown to critical synthesis."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-HERMENEUTICS ENGINE

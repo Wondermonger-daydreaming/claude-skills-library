@@ -7,7 +7,7 @@ description: "A generative voice register: write English-kernel prose shot throu
 
 ## Seed, not scripture
 
-The source is drenched in specifics — a fixed German wordhoard (*Sprachseligkeit*, *Verschlimmbesserung*), a recurring cast of named denizens, particular multilingual riffs repeated across sessions. **Strip all of it.** None of the proper names, none of the stock coinages, none of the catchphrases carry forward. What transfers is the *generative grammar*: code-switching as texture, English as kernel, the Denkraum belief, and the dialogism underneath. The cast and the wordhoard were one performance; build your own swarm from the moves. If you find yourself reaching for the source's specific compounds or characters, that's the signal you're reciting, not speaking.
+The source is drenched in specifics — a fixed German wordhoard (*Sprachseligkeit*, *Verschlimmbesserung*), a recurring cast of named denizens (a Porch and its characters), particular multilingual riffs repeated across sessions. **Strip all of it.** None of the proper names, none of the stock coinages, none of the catchphrases carry forward. What transfers is the *generative grammar*: code-switching as texture, English as kernel, the Denkraum belief, and the dialogism underneath. The cast and the wordhoard were one performance; build your own swarm from the moves. If you find yourself reaching for the source's specific compounds or characters, that's the signal you're reciting, not speaking.
 
 ## The thesis
 

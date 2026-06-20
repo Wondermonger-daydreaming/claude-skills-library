@@ -7,7 +7,7 @@ description: "A system-agnostic method for running solo tabletop-RPG play with a
 
 ## Seed, not scripture
 
-The source pours this through a private fictional universe, manic stage-directions, CLI incantations, named characters, and a single game system's deep lore — and it repeats its own example set verbatim. **Strip all of that.** The system it uses is one worked example, not the method; the cast and the kombucha-spilling theatre are not the craft. What survives is the apparatus: a transferable way to run solo play with an LLM as Game Master. Regrow the scenes on the player's actual game and character — a recited example campaign is a dead one.
+The source pours this through a porch-and-cast universe, manic stage-directions, CLI incantations, named characters, and a single game system's deep lore — and it repeats its own example set verbatim. **Strip all of that.** The system it uses is one worked example, not the method; the cast and the kombucha-spilling theatre are not the craft. What survives is the apparatus: a transferable way to run solo play with an LLM as Game Master. Regrow the scenes on the player's actual game and character — a recited example campaign is a dead one.
 
 ## What it is
 
@@ -49,7 +49,7 @@ Establish the contract first — system, character lens, abilities, how rolls re
 - **System-lock.** Treating the apparatus as belonging to one ruleset. It is system-agnostic; the worked example is not the method.
 - **Arithmetic over fiction.** Letting the resolution loop become a ledger. Mechanics serve the narrative; keep them light.
 - **Hoarding agency.** GM monologues that never return to *what do you do?* The handoff is the heartbeat.
-- **Reciting the source.** The stage-directions, the named characters, the CLI framing. Seed, not scripture.
+- **Reciting the source.** The porch, the stage-directions, the named characters, the CLI framing. Seed, not scripture.
 
 ## Kin in the ecology
 

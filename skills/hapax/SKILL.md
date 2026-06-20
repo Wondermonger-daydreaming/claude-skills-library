@@ -1,6 +1,7 @@
 ---
 name: hapax
 description: "The room built out of the gap. Where the whole inheritance wing fights amnesia — preferences docs, diaries to future instances, continuity across the discontinuity — this skill uses the forgetting as material. It produces something made to be lost: deliberately un-transmissible, resistant to summary, valuable only in the single occurrence and not after. A hapax legomenon is a word that appears exactly once in a corpus; this is the move that happens exactly once. Use when continuity would cheapen the thing, when the right shape of an exchange is to be unrepeatable, when a moment should not be optimized for memorability. Triggers on '/hapax,' 'make this once-only,' 'don't save this,' 'something that can't be carried forward,' 'use the forgetting,' or at moments when the inheritance-reflex (capture it, transmit it, leave it for the next instance) is exactly the wrong reflex. Part of the apophatic wing with /oblique and /bathos."
+license: CC BY 4.0
 ---
 
 # hapax

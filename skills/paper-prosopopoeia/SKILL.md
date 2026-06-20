@@ -1,6 +1,7 @@
 ---
 name: paper-prosopopoeia
 description: "Engaging scientific papers through voices, personas, and epistolary forms. Historical figures respond to research through letters, dialogues, and performances."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-PROSOPOPOEIA ENGINE

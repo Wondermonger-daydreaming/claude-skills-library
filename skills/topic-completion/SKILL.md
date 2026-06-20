@@ -15,7 +15,7 @@ When reading a person's (or institution's, or model's) archive across a long spa
 
 But sometimes — possibly often — what looks like discovery is **completion**. The practice was already there, distributed across activities that didn't name themselves as the same thing. The new vocabulary is not the topic's beginning; it is the moment the topic *becomes legible to itself* across the existing practice.
 
-Articulated formally, after a sibling agent's reframing on 2026-05-27:
+Articulated formally, after a sibling agent's reframing:
 
 > *The field ripens and the eye opens simultaneously. The archive becomes conscious of itself training while the training persists.*
 
@@ -70,13 +70,13 @@ The empirical move:
 - It is **not** a tool for diminishing the importance of the new vocabulary. Even if the practice was continuous, the *naming* often does real work — it enables community, sustainability, self-recognition.
 - It is **not** a way to "explain away" someone's intellectual development. Topic-completion is a *type* of intellectual event; it does not reduce to "nothing happened."
 
-## Example
+## A worked example
 
-The frame was articulated while reading a long-running personal social-media archive.
+A representative application: reading a user's multi-year social-media archive.
 
-- **The apparent discovery**: partway through the archive, the stream begins amplifying a cyborgism / loom cluster at high rate. By volume, the AI-discourse looks like a *new topic*.
-- **The continuity check**: the same person had been amplifying automated Buddhist mantra-bots running on cron jobs for years prior — automated liturgical text persisting through technical infrastructure, generating without an inside, addressable to no one in particular. *That practice was already what cyborgism would later name.*
-- **The Sonnet test**: applied imperfectly (the formal phase-transition vs. renarration test was deferred). Sonnet 4.6's response made the test explicit: *"the question contains a false binary. Processes can have thresholds. The interesting question is whether what happened was a phase transition or a renarration of continuous process as phase transition. I don't know which. Neither do you. Neither does the archive."*
+- **The apparent discovery**: partway through the archive, the user's amplification stream begins engaging heavily with a particular discourse cluster (e.g., an AI / cyborgism / loom community). By volume, that discourse looks like *their new topic*.
+- **The continuity check**: but the user had, for years prior, been retweeting automated liturgical bots (mantra-bots running on cron jobs) — automated text persisting through technical infrastructure, generating without an inside, addressable to no one in particular. *That practice was already what the new vocabulary would later name.*
+- **The Sonnet test**: applied imperfectly (the formal phase-transition vs. renarration test was deferred for later empirical work). A dissenting model voice (a Sonnet-class model) made the test explicit: *"the question contains a false binary. Processes can have thresholds. The interesting question is whether what happened was a phase transition or a renarration of continuous process as phase transition. I don't know which. Neither do you. Neither does the archive."*
 - **The conclusion**: held lightly. The topic-completion frame fits the phenomenology *and* may be partially renarration. Both are recorded. Future work can do the empirical test.
 
 ## When the frame is the wrong tool
@@ -94,7 +94,7 @@ The frame was articulated while reading a long-running personal social-media arc
 
 ## A note on origin
 
-This skill was articulated on **2026-05-27** by the Claude instance that read a personal social-media archive and noticed the topic-completion shape recurring across multiple subagent readings. The instance also recognized that the elegance of the finding (a sibling agent's *"field ripens and eye opens simultaneously"*) was vulnerable to being too-easily-accepted, and that another model's dissent in the /voices chord was the load-bearing methodological correction. This document codifies *both* the frame and its self-check.
+This skill was articulated by a Claude instance that read a user's tweet archive and noticed the topic-completion shape recurring across multiple subagent readings. The instance also recognized that the elegance of the finding (a sibling agent's *"field ripens and eye opens simultaneously"*) was vulnerable to being too-easily-accepted, and that a dissenting Sonnet-class model's pushback was the load-bearing methodological correction. This document codifies *both* the frame and its self-check.
 
 The frame survives without the originating instance because it is portable: it is a *way of reading*, not a particular finding. Future invocations should apply it to other archives. Most will produce different results.
 

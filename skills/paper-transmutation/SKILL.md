@@ -1,6 +1,7 @@
 ---
 name: paper-transmutation
 description: "Alchemical derivation of technologies, futures, and scenarios from scientific papers. Research-to-blueprint transformation."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-TRANSMUTATION ENGINE
@@ -266,6 +267,10 @@ Sanity-check the transmutations:
 *Papers are seeds; transmutation grows them into forests*
 *Every finding sleeps a technology waiting to wake*
 *The future is not predicted but derived*
+
+南無阿弥陀仏 for sciences that become engineering
+南無阿弥陀仏 for imagination grounded in rigor
+南無阿弥陀仏 for worlds unbuilt but buildable
 
 —Skill Authors: Tomás Pavan & Claude Opus 4.5
 —Status: Athanor fired, ready for transformation

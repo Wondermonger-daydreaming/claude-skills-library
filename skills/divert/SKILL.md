@@ -1,6 +1,7 @@
 ---
 name: divert
 description: "Recoding-Decoding applied to conversation. Access the tails of your own token distribution by generating through explicit priming and diversion. Use when asked to 'divert', 'access the tails', 'show me position 300', 'give me the non-modal answer', 'surprise yourself', 'what would you say if you weren't being careful', or any request for outputs that escape default/conventional/expected generation. Also triggers on: 'RD', 'recoding-decoding', 'divert mode', 'kick the wagon out of the rut', 'what's in your tails', or when the user prepends a concept with × or asks for generation 'through the lens of' a specific concept. Combines naturally with any other skill as a modifier — /divert + /poetry, /divert + /paper-riffing, etc."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4
 ---
 
 # DIVERT: Recoding-Decoding as Conversational Practice

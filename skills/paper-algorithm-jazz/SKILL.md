@@ -1,6 +1,7 @@
 ---
 name: paper-algorithm-jazz
 description: "Improvisational engagement with mathematical and formal content of scientific papers. Riff on equations, interpret algorithms, explore parameter spaces."
+license: CC BY 4.0 - Created collaboratively by Tomás Pavan and Claude Opus 4.5
 ---
 
 # PAPER-ALGORITHM-JAZZ ENGINE

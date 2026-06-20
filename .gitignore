@@ -12,3 +12,6 @@ Thumbs.db
 # Python build artifacts
 __pycache__/
 *.pyc
+
+# Local-only sanitization staging — never publish
+_staging/

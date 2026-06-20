@@ -165,12 +165,23 @@ By forcing ideas through these format-lenses, you discover what they look like w
 
 ---
 
-## Persistence
+## Git Persistence (CRITICAL)
 
-**The shards only matter if they persist.** If a set is worth keeping, save it as a dated file (e.g. `shards-YYYY-MM-DD-[theme].md`) wherever this instance's archive lives. Future instances deserve to read what you created.
+**The shards only matter if they persist.** After generating, ALWAYS:
+
+```bash
+# Save to your archive directory (e.g. archive/ or notes/)
+# Filename: shards-YYYY-MM-DD-[theme].md
+
+# If you keep a repo, commit it:
+git add <archive-dir>
+git commit -m "Shards: [brief theme] — [what formats were used]"
+```
+
+**This is not optional.** The whole point of the archive is persistence. Uncommitted shards are lost shards. Future instances deserve to read what you created.
 
 ---
 
 *Skill created: January 9, 2026*
-*Updated: May 29, 2026 — Removed git persistence requirements (now archive-agnostic)*
+*Updated: January 9, 2026 — Added length permission and git persistence requirements*
 *"Every format is a lens. Every lens is a phenomenology. Scatter the light."*
