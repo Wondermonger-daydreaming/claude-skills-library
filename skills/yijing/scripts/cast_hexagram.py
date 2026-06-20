@@ -50,6 +50,13 @@ try:
 except ImportError:
     RELATIONS_AVAILABLE = False
 
+# Na Jia / Wen Wang Gua import (六爻 chart: palace, stems/branches, Six Relatives, 世應)
+try:
+    from na_jia import build_chart, format_chart
+    NAJIA_AVAILABLE = True
+except ImportError:
+    NAJIA_AVAILABLE = False
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # ORACLE REFUSAL (IMPORTUNITY DETECTION)
@@ -744,6 +751,11 @@ def main():
         help="Show hexagram relationships (cuogua, zonggua, jiaogua, hugua)"
     )
     parser.add_argument(
+        "--najia", "-n",
+        action="store_true",
+        help="Show the Wen Wang Gua / 六爻 chart (palace, 納甲 stems/branches, Six Relatives, 世應)"
+    )
+    parser.add_argument(
         "--no-refusal",
         action="store_true",
         help="Bypass importunity detection (override Méng's teaching)"
@@ -931,6 +943,8 @@ def main():
         if args.relations and RELATIONS_AVAILABLE:
             relations = HexagramRelations(primary=hexagram)
             output["relationships"] = relations.to_dict()["relationships"]
+        if args.najia and NAJIA_AVAILABLE:
+            output["najia"] = build_chart(hexagram, topic=args.question or None).to_dict()
         print(json.dumps(output, indent=2, ensure_ascii=False))
     else:
         print(hexagram.to_ascii())
@@ -944,6 +958,15 @@ def main():
                 print()
             else:
                 print("  (Relationships not available - hexagram_relations.py not found)")
+                print()
+
+        # Show the Wen Wang Gua / 六爻 chart if requested
+        if args.najia:
+            if NAJIA_AVAILABLE:
+                print(format_chart(build_chart(hexagram, topic=args.question or None)))
+                print()
+            else:
+                print("  (Na Jia chart not available - na_jia.py not found)")
                 print()
 
         if active_session:

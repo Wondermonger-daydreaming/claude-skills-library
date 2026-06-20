@@ -2,7 +2,7 @@
 
 *The Wen Wang Gua divination apparatus: Eight Palaces, Na Jia stem-branch assignment, Five Elements per line, the Six Relatives, and the World/Response lines.*
 
-> **STATUS: reviewed & integrated 2026-06-20.** Authored by the Najia Scholar (sub-agent) from authoritative Chinese sources and triangulated tutorials; the load-bearing 8×8 palace partition was independently re-verified by the orchestrator (all 64 King-Wen hexagrams appear exactly once). Grounded in 京氏易傳 (京房) / 火珠林 / 易學網 + udn & 2743.com transmission. This is **secondary-triangulated, not a direct read of the 京氏易傳 primary text** (the 403/index walls in §8 blocked that) — so low-confidence spots are flagged inline with **⚠**, gathered in §7 (Disputed/Uncertain), with full provenance in §8 (Source-Access Log). The 飛伏 (flying-hidden) layer is openly deferred (§7.4). Characters + pinyin + English gloss throughout; where the tradition disagrees, both readings are kept rather than flattened.
+> **STATUS: reviewed & integrated 2026-06-20; ENACTED in code 2026-06-20.** Compiled from authoritative Chinese sources and triangulated tutorials; the load-bearing 8×8 palace partition was independently re-verified (all 64 King-Wen hexagrams appear exactly once). **This reference is now executable: `scripts/na_jia.py` *derives* every table here from first principles (palace heads + flip rule; per-trigram branch-starts + 陽順陰逆; the 生/克 cycles; the 世應 walk) rather than transcribing them, then `tests/test_na_jia.py` checks the derivation against this doc's worked examples, canonical external charts, and the partition invariant. Run `python3 scripts/na_jia.py <1-64>` for any hexagram's chart, or `cast_hexagram.py … --najia` on a live cast. The derivation caught one error in this doc (the 归魂 outer-trigram gloss, §1.2) — see the ⚠ Correction there.** Grounded in 京氏易傳 (京房) / 火珠林 / 易學網 + udn & 2743.com transmission. This is **secondary-triangulated, not a direct read of the 京氏易傳 primary text** (the 403/index walls in §8 blocked that) — so low-confidence spots are flagged inline with **⚠**, gathered in §7 (Disputed/Uncertain), with full provenance in §8 (Source-Access Log). The 飛伏 (flying-hidden) layer is openly deferred (§7.4). Characters + pinyin + English gloss throughout; where the tradition disagrees, both readings are kept rather than flattened.
 
 ---
 
@@ -58,7 +58,7 @@ The rule, position by position (each step **keeps** the prior changes and adds t
 
 Two special steps to note:
 - **游魂 (Wandering Soul):** the 5th-gen hexagram had lines 1–5 all changed. To form 游魂 the **4th line reverts**. (Equivalently: from the pure hexagram, lines 1,2,3,5 are changed and 4 restored.) Image: the soul has wandered out to the 5th line and now turns back.
-- **归魂 (Returning Soul):** from 游魂, the **entire inner trigram returns** to its original pure-trigram form, while the outer trigram stays inverted. (Equivalently: the outer trigram is the opposite of the palace trigram, the inner trigram is the palace trigram itself.) Image: the soul comes home — the inner (本) trigram is restored.
+- **归魂 (Returning Soul):** from 游魂, the **entire inner trigram returns** to its original pure-trigram form. (Equivalently: the inner trigram **is the palace trigram itself**; the outer trigram is the palace trigram **with only its middle line flipped** — i.e. the 游魂 outer trigram, unchanged.) Image: the soul comes home — the inner (本) trigram is restored. **⚠ Correction (2026-06-20, caught by `na_jia.py`'s structural derivation):** an earlier draft of this line claimed "the outer trigram is the opposite of the palace trigram." That is **false** — e.g. 乾宮 归魂 = 火天大有 (☲/☰), whose outer trigram is ☲ Lí, *not* ☷ Kūn (the opposite of ☰ Qián). The opposite-gloss would also break the 8×8 partition. The mechanical rule above (restore the inner trigram) is correct and is what the engine implements; the discarded gloss was a hand-written error in the secondary transcription, exposed by re-deriving the grid from first principles. *(Convergence-across-ancestry: the derivation, the doc's own partition self-check, and canonical external charts all agree — the discarded gloss agreed with none of them.)*
 
 ### 1.3 The full 8 × 8 palace table
 
@@ -278,7 +278,60 @@ Once 世應 and the Six Relatives are placed, the diviner selects the **用神**
 | children, subordinates, blessing, peace-of-mind, medicine | **子孫** |
 | siblings, peers, partners, competition, loss of money | **兄弟** |
 
-(This selection layer is downstream of the apparatus defined here; included for completeness because the SKILL.md template names 用神 and 忌神. A full 用神 / 元神 / 忌神 / 仇神 doctrine belongs in a separate INTERPRETATION-level file.)
+(This *selection* layer — which relative is the 用神 for a given question — is downstream and partly judgment-bound. But the **relational** layer that follows from a chosen 用神 is purely structural and **is implemented** (`four_spirits` in `na_jia.py`): 元神 (生用神, support), 忌神 (克用神, attacker), 仇神 (生忌神 = 克元神, attacker's source) — all derived from the relative-level 生/克 cycles, no calendar. Confirmed against the five canonical 用神 cases. What remains genuinely downstream is the **strength-judgment** of these spirits — 旺相休囚死 by season, 空亡, 日月生扶克, 動爻 — which needs calendar timing and belongs in a separate INTERPRETATION-level file.)
+
+### 5.3 飛伏 (fēi fú) — the flying and hidden spirits
+
+> **DELIVERED 2026-06-20** (was the "single biggest undelivered piece," §7.4). The extraction rule below was re-derived from structure and **cross-checked against the primary texts and independent re-derivation**, and **corroborated by a web-fetched primary source**: 《火珠林·六親根源》 — **「本宮在下為伏之六親，旁宮在上為飛之六親」** (zh.wikisource.org), i.e. the 伏神 comes from the 本宮 (palace hexagram). Implemented and tested in `scripts/na_jia.py` (`flying_hidden`, `missing_relatives`).
+
+Every line of a divinatory hexagram has two spirits stacked at its position:
+- **飛神 (fēi shén, "flying spirit")** — the **visible** line of the cast hexagram.
+- **伏神 (fú shén, "hidden spirit")** — the line **hidden behind** it, taken from the **本宮首卦** (the pure / 八純 palace hexagram) **at the same position**.
+
+**The rule (dominant 卜筮正宗 / 增删卜易 / 京房 納甲 convention):**
+1. The 伏神 is **always** taken from the pure palace hexagram at the same line position. There is **no** mainstream 對宮卦 or 錯卦 source — Note: 對宮法 breaks the 宮→五行→六親 identity (makes 飛伏 leave the palace element to reckon by), and 增删卜易 already refuted it; 錯卦 has no textual basis. A pure hexagram carries all five relatives (one is doubled), so any relative *can* be found in it.
+2. A 伏神 is only **live** (worth consulting, 才有戲) when the relative it carries is **absent from the visible hexagram** (不上卦). The口訣: **"有現不用伏"** — if the relative appears, use the appearing line; do not consult the hidden one. (In full practice absence is judged against both the main hexagram **and** the 變卦; this engine flags absence from the main hexagram and leaves the 變卦 overlay to the diviner.)
+
+**Worked example — 天風姤 (Gòu, #44, 乾宮一世).** Its lower trigram ☴ Xùn carries 辛丑/亥/酉 — no Wood branch anywhere, so **妻財 (Wood, vs Metal palace) 不上卦.** In the pure palace hexagram 乾為天, line 2 is 寅木妻財. So **妻財 甲寅(木) 伏** at line 2, behind the 飛神 子孫 亥水. (飛 = 亥水子孫; 伏 = 寅木妻財; 爻位二.) Confirmed against canonical primers.
+
+**The multi-candidate reef, and why it does not arise here.** A pure hexagram's *doubled* relative occupies two positions (e.g. 乾's 父母 at lines 3 辰土 and 6 戌土), so *in principle* a missing relative could have two candidate 伏神, requiring a selection rule (擇其有用者: not 空亡, not 克傷 by its 飛神, supported by 日月; else take the nearer or the 旺). The engine therefore returns a **candidate list (0..N triples)**, not a single value. But verifying across all 64 hexagrams + eight palaces shows the doubled relative is **never** the one that goes missing in its own palace (overlap = ∅ for all eight palaces) — so in single-hexagram 裝卦 **each absent relative has exactly one 伏神.** The list structure is kept for robustness (and the future 變卦 overlay); the selection rule (空亡/克傷/日月生扶) is downstream interpretation, out of scope here as 用神 is.
+
+### 5.4 動爻 → 變爻 — moving-line dynamics (the 回頭 feedback)
+
+When a line is a 動爻 (moving line, 老陰 6 / 老陽 9) it transforms into its 變爻 (the line of the 變卦 / relating hexagram at that position). Two structural facts follow, both **calendar-free** and implemented (`moving_line_dynamics` in `na_jia.py`):
+
+- **The 變爻's 六親** is judged against the **original** hexagram's palace element (本宮五行) — the 變卦 lines are *not* re-assigned to the changed hexagram's palace.
+- **The 回頭 (turn-back) feedback** = the 生/克 relation of the 變爻 element back onto the 動爻 element: **回頭生** (變生動, favorable), **回頭克** (變克動, harmful), **比和** (same), **泄氣** (動生變, drained), **耗** (動克變, expended).
+- **回頭沖** (地支層, the `is_clash` flag): when the 動爻 branch and 變爻 branch form a 六冲 pair. *Single*-moving-line casts never produce one (a single line-flip can't reach the opposite branch); across *multi*-moving casts it occurs **512/12288** times, only ever as 巳↔亥 or 卯↔酉 — both of which are also 回頭克, so 回頭沖 is reported *alongside* the element feedback, not in place of it.
+
+Example (cast 訟 #6 with line 5 moving): 妻財 申金 動 → 變 子孫 未土; 土生金 ⇒ **回頭生** (the wealth-line is fed by its own transform).
+
+**化進神 / 化退神** (advancing/retreating within a *same-element* transform) is also implemented. For the four non-Earth elements the 生(長生)→旺 pairs are unambiguous: 進神 = 生→旺 (亥→子, 寅→卯, 巳→午, 申→酉; strengthening), 退神 = 旺→生 (reverse; weakening). Example: 屯 #3 line 2, 寅木 → 卯木 = **化進神**.
+
+The **Earth** branches (辰戌丑未) cannot use the 生→旺 rule — Earth has no 長生/帝旺 among 辰戌丑未 (they fall on non-Earth branches). The classical texts therefore order Earth 進退 by the **four-season cycle** (the four 季月, last month of each season): **進 = 丑 → 辰 → 未 → 戌 → 丑** (季冬 → 季春 → 季夏 → 季秋), 退 = the reverse. **This is the CLASSICAL rule, applied by default** — *not* a minority school: 《增删卜易》 and 《卜筮正宗》 both give exactly this ordering, in agreement (web-fetched primary quotes, 2026-06-20). So, by default:
+   - 丑土 → 辰土 = **化進神**; 辰土 → 丑土 = **化退神**
+   - 未土 → 戌土 = **化進神**; 戌土 → 未土 = **化退神**
+   - 辰↔戌, 丑↔未 = **比和** (opposite Earth branches — 冲, two steps apart, never adjacent)
+
+> **Why unconditional, and why the "dispute" is empty.** A check of the primary texts corrected an initial misreading: the four-season rule had appeared to be a modern minority view ("Earth has no 進退"), but 《增删卜易》 and 《卜筮正宗》 both give it — a reminder that a fetched primary source outranks plausible reconstruction. Later texts do vary — 《易隐》 and a modern primer keep only 丑↔辰, 未↔戌 and drop 辰→未, 戌→丑 — **but that variance is empty in practice:** across all 64 hexagrams × 6 lines, the *only* Earth→Earth transforms that ever occur in 动变 are the four adjacent-step pairs 丑↔辰 and 未↔戌 (each 8×); the disputed pairs and the 冲 pairs never occur at all. On every Earth transform that can actually happen, *all* schools (增删卜易, 卜筮正宗, 易隐, modern) agree — so no opt-in flag is needed.
+
+Still downstream (need 空亡 / calendar): **化空 / 化墓 / 化絕**.
+
+### 5.5 六冲卦 / 六合卦 — hexagram-level clash and harmony
+
+A **六冲卦** (Six-Clash hexagram) is one where every line and its 世/應-axis counterpart (line *i* ↔ line *i+3*) form a **六冲** pair (子午·丑未·寅申·卯酉·辰戌·巳亥); a **六合卦**, a **六合** pair throughout (子丑·寅亥·卯戌·辰酉·巳申·午未). Derived structurally from the Na Jia branches (`is_liuchong` / `is_liuhe`), the rule yields exactly the canonical sets:
+
+- **六冲卦 = the 10:** 八純卦 (乾坤坎離震艮巽兌) + 無妄(25) + 大壯(34).
+- **六合卦 = the 8:** 泰(11) 否(12) 豫(16) 賁(22) 復(24) 困(47) 旅(56) 節(60).
+
+**Meaning (primary):** 《增删卜易·六冲章》 — **「沖者散也，凡占凶事宜於沖散、占吉事而不宜」** (web-fetched, zh.wikisource.org). 六冲卦 portends **scattering / volatility / fast-but-impermanent** outcomes: 近病·官非·生育 遇之反吉 (the bad scatters away), but 久病·謀事 遇之 則散而不成. 六合卦 is its dual — gathering, union, slow to hold. (六冲卦 meaning is primary-sourced; the 六冲卦/六合卦 *lists* are structural derivations that match the canonical sets; a verbatim primary *list* of the 六合卦 was not reachable, 404.) **世應相冲 is not a separate concept** — it is provably equivalent to 六冲卦 (the axis-pairs are exactly the 世/應 pairs).
+
+### 5.6 六親 refinements — 持世/應 and 兩現
+
+Two calendar-free refinements over the bare Six-Relative assignment (§4):
+
+- **持世 / 持應** (`world_relative` / `response_relative`): the Six-Relative sitting on the 世爻 and 應爻 — load-bearing in reading (e.g. 世持兄弟, 世持官鬼 each carry standard import). Surfaced directly; the *meanings* are an interpretation layer (not encoded here as authoritative — the foundational phrasing 「生我者父母…」 was not reachable verbatim this pass; the six-relatives *web search was captcha-blocked*, so meanings are deferred rather than asserted).
+- **兩現** (`doubled_relatives`): the relatives that appear on **two or more lines**. When the 用神 is 兩現, the tradition selects the operative one by 臨世應 / 動 / 旺衰 / 月日 — but **most of those criteria need calendar timing**, so the engine *flags* 兩現 and leaves the selection to the diviner (the 兩現章 selection text was not reachable — 404). Detection is a fact; selection is downstream.
 
 ---
 
@@ -313,9 +366,9 @@ This matches the standard 屯卦 装卦 in every Liu Yao reference. ✓ The quer
 
 2. **⚠ Whether the Heavenly Stem is "real" Na Jia or vestigial.** Some authorities (esp. the 京氏 / 卦氣 lineage and Han image-number scholars) insist the stem assignment is structurally essential (it drives 飛伏 flying-hidden, 卦氣 hexagram-qi, and calendrical fitting). The dominant *practical* Liu Yao schools (火珠林 lineage) drop the stem entirely and work from branches alone. Both are reported; I have not adjudicated. The *branch* assignments are uncontested.
 
-3. **⚠ Coin-toss head/tail convention.** Out of scope here (it's CASTING, not Na Jia), but the SKILL.md §"Three-Coin Method" already hedges "(or reverse, depending on tradition)" — this is a genuine, unresolved regional split (字/背 = yin/yang varies). Flagged so the orchestrator doesn't read my silence as endorsement of one convention.
+3. **⚠ Coin-toss head/tail convention.** Out of scope here (it's CASTING, not Na Jia), but the SKILL.md §"Three-Coin Method" already hedges "(or reverse, depending on tradition)" — this is a genuine, unresolved regional split (字/背 = yin/yang varies). Flagged so the silence here is not read as endorsement of one convention.
 
-4. **⚠ 飛伏 (fēi fú, "flying and hidden") not defined here.** When a needed Six-Relative is *absent* from a hexagram, the tradition supplies a **hidden line (伏神 fú shén)** drawn from the underlying pure-palace hexagram, "flying" (飛神 fēi shén) being the visible line that covers it. This is a real and load-bearing part of the 京房 system (and is named in the SKILL.md source table). I have **deliberately scoped it out** of this draft because confirming the exact 飛伏 extraction rule cleanly from a primary source was blocked by the 403s (see §8); it deserves its own section once a clean source is fetched. **This is the single biggest undelivered piece.**
+4. **✓ 飛伏 (fēi fú, "flying and hidden") — DELIVERED 2026-06-20, now §5.3.** Was scoped out of the first draft (the primary-source 403s blocked confirming the extraction rule). Resolved not by fetching the blocked source but by **re-deriving the rule from structure and cross-checking it against the primary texts and independent re-derivation**, then corroborated by a web-fetched primary source (《火珠林·六親根源》). Implemented + tested in `na_jia.py`. The remaining open edge is the **selection rule** among candidate 伏神 (空亡/克傷/日月生扶) and the **變卦 overlay** for judging absence — both downstream interpretation layers, deliberately out of scope (as 用神 selection is).
 
 5. **⚠ Palace order variants.** I give the canonical 乾坎艮震巽離坤兌 order (yang houses by son-seniority, then yin houses by daughter-seniority). A minority of late texts list the palaces 乾兌離震巽坎艮坤 (the 先天 Fu-Xi circular order) for *cosmological* diagrams. The *divinatory* palace order — the one that generates the 8×8 table — is the one given. Confidence: high.
 
@@ -329,7 +382,7 @@ This matches the standard 屯卦 装卦 in every Liu Yao reference. ✓ The quer
 - **WebSearch summaries** confirmed: the generating rule *「純卦按初爻…依次累計變爻」*; the full 世應 table *「八成卦世六應三…」*; and all eight palace hexagram-sequences (cross-checking 乾/坎/艮/震/巽 explicitly). **Used for §1.2, §1.3, §5.1.**
 - **zh.wikipedia 文王卦** — confirmed the high-level frame (世爻=self, 應爻=other; 官鬼/父母/兄弟/子孫/妻財 named) but, by its own "needs more sources" banner, carried **no** detailed tables. Used only for framing.
 
-**Failed / blocked (logged, not retried into the wall — per lab protocol, ≤3 attempts then pivot):**
+**Failed / blocked (logged, not retried into the wall — ≤3 attempts then pivot):**
 - **zhihu** `p/138355945` (納甲筮法 京房) and `p/660229990` (四步裝卦) — **HTTP 403** (Zhihu blocks non-browser agents). These were the *primary* assigned sources; pivoted to the equivalent material via udn + 2743 + 易學網 search.
 - **eee-learning.com** `/article/1757`, `/article/1790` (八宮卦), `/article/1799` (八宮世應), `/book/5687` (乾宮卦 京氏易傳), `/book/5692` — **HTTP 403** on every direct fetch. Their *content* was recovered via WebSearch result-summaries, but I could **not** read the 京氏易傳 palace-chapter primary text directly.
 - **ctext.org/jingshi-yizhuan** — fetched, but returned only the **navigation index**, not the per-hexagram commentary body. I could not extract Jing Fang's *original* 世/應/納甲 sentences from ctext in this pass (the text lives on the individual hexagram subpages, which I did not enumerate one-by-one). **The single most important primary-source gap: §§1–5 are confirmed from authoritative secondary transmission + triangulation, NOT from a direct read of the 京氏易傳 source text.**
@@ -358,8 +411,11 @@ BUILD A HEXAGRAM (四步裝卦):
 
 GENERATING RULE (palace sequence): 本宮→flip1→flip2→flip3→flip4→flip5
    →游魂(flip4 back)→归魂(inner trigram restored)
+
+飛伏 → 飛神 = visible line; 伏神 = pure palace hexagram's line at same position.
+       Consult 伏神 only for a relative 不上卦 ("有現不用伏"). §5.3.
 ```
 
 ---
 
-*Drafted by the Najia Scholar, June 2026. Primary sources: 京氏易傳 (京房) via transmission; 火珠林; 易學網 (eee-learning.com); udn 曹盛健 八宮納甲表; 2743.com 六親世應圖. Flagged ⚠ items and the §8 log mark every spot where authority is secondary or derivation rather than a direct primary read. The 飛伏 section remains to be written from a clean source.*
+*Compiled June 2026; §5.3 (飛伏) added and the engine `na_jia.py` written 2026-06-20. Primary sources: 京氏易傳 (京房) via transmission; 火珠林; 易學網 (eee-learning.com); udn 曹盛健 八宮納甲表; 2743.com 六親世應圖. The 飛伏 rule was re-derived from structure and cross-checked against the primary texts and independent re-derivation — the same self-verification method that caught the §1.2 归魂 error. Flagged ⚠ items and the §8 log mark every spot where authority is secondary or derivation rather than a direct primary read.*

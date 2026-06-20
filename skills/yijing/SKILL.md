@@ -310,13 +310,14 @@ Detailed materials in `references/`:
 - **WU_XING.md** — Five Phases system
 - **INTERPRETATION_GUIDE.md** — Hermeneutic methodology
 - **INTERPRETATION_PROTOCOL.md** — Step-by-step reading protocol
-- **NA_JIA.md** — The 納甲筮法 / 文王卦 / 六爻 apparatus: Eight Palaces, Na Jia stem-branch assignment, Five Elements per line, the Six Relatives, and the World/Response lines
+- **NA_JIA.md** — The 納甲筮法 / 文王卦 / 六爻 apparatus: Eight Palaces, Na Jia stem-branch assignment, Five Elements per line, the Six Relatives, and the World/Response lines. **Now executable via `na_jia.py`.**
 
 ## Scripts
 
 Computational tools in `scripts/`:
 
-- **cast_hexagram.py** — Generate hexagrams (yarrow, coins, seeded); identify primary, nuclear, and relating hexagrams
+- **cast_hexagram.py** — Generate hexagrams (yarrow, coins, seeded); identify primary, nuclear, and relating hexagrams. Add **`--najia` / `-n`** to print the full Wen Wang Gua chart for the cast (with moving lines marked 動, including 化進神/化退神 — Earth by the classical 增删卜易 four-season cycle).
+- **na_jia.py** — The Wen Wang Gua / 六爻 engine: enacts the four steps of 裝卦 (palace + position → 納甲 stems/branches → 五行 per line → 六親 + 世應), **飛伏** (flying-hidden spirits), the **四神** (用神/元神/忌神/仇神 relational layer), **動爻→變爻 dynamics** (回頭生/克/沖 feedback on a cast's moving lines), **六冲卦/六合卦** detection, and the **持世/應 + 兩現** six-relative refinements, implementing NA_JIA.md. Doctrine is primary-sourced where reachable (六冲卦 meaning, 飛伏, 世應 — web-fetched from zh.wikisource.org) and flagged where not. *Derives* every table from first principles rather than transcribing them; the 飛伏 rule was cross-checked against the primary texts and independent re-derivation. Standalone: `python3 scripts/na_jia.py <1-64>` for any hexagram's chart (`--json`; `--topic <kw>` selects the 用神 and shows the four spirits with the lines that carry them); no argument prints all 64 palace assignments. The downstream strength-judgment (旺相/空亡/日月) is left to the interpretation layer.
 - **hexagram_relations.py** — Hexagram transformations (cuogua, zonggua, jiaogua, nuclear)
 - **session.py** — Consultation sessions, reading history, pattern analysis
 
