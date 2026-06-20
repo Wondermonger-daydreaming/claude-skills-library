@@ -24,42 +24,52 @@ In traditional horary, only the **five Ptolemaic aspects** are used:
 
 An aspect is "in orb" when planets are close enough to be considered in aspect, even if not exact.
 
-### Orb by Planet (Moiety System)
+### Orb by Planet — the Moiety System (THIS is the operative rule)
 
-Each planet has a "moiety" (half-orb). Add the moieties of two planets to get their combined orb.
+**In Lilly's horary the orb belongs to the PLANETS, not to the aspect.** Each planet carries its own orb
+("rayes"); the orb of an aspect *between two planets* is the **sum of their two moieties** (half-orbs). An aspect
+is "in orb" when the two planets are within `moiety(A) + moiety(B)` of exact — regardless of which of the five
+aspects it is. (Lilly, *Christian Astrology* 1647, Book I; reproduced by Warnock, Renaissance Astrology.)
 
-| Planet | Moiety | Full Orb (if aspecting itself) |
-|--------|--------|-------------------------------|
-| Sun ☉ | 8°30' | 17° |
-| Moon ☽ | 6°00' | 12° |
-| Mercury ☿ | 3°30' | 7° |
-| Venus ♀ | 4°00' | 8° |
-| Mars ♂ | 4°00' | 8° |
-| Jupiter ♃ | 5°30' | 11° |
-| Saturn ♄ | 5°00' | 10° |
+Lilly gives two slightly different orb sets "as my Memory best Remembereth them"; this skill standardizes on
+**Lilly's fuller set (set 1)**:
 
-**Example:** Sun-Moon aspect
-- Sun's moiety: 8°30'
-- Moon's moiety: 6°00'
-- Combined orb: 14°30'
-- So Sun and Moon are in aspect if within 14°30' of exact
+| Planet | Full Orb (Lilly set 1) | Moiety (half) |
+|--------|------------------------|----------------|
+| Sun ☉ | 17°00' | 8°30' |
+| Moon ☽ | 12°30' | 6°15' |
+| Jupiter ♃ | 12°00' | 6°00' |
+| Venus ♀ | 8°00' | 4°00' |
+| Mars ♂ | 7°30' | 3°45' |
+| Mercury ☿ | 7°00' | 3°30' |
+| Saturn ♄ | 10°00' | 5°00' |
 
-**Example:** Mercury-Saturn aspect
-- Mercury's moiety: 3°30'
-- Saturn's moiety: 5°00'
-- Combined orb: 8°30'
+*(Lilly's set 2 runs slightly tighter — Sun 15°, Saturn/Jupiter 9°, Mars/Venus/Mercury 7°, Moon 12°. The two
+sets rarely change a judgment; set 1 is the more-cited. The orb dispute — moiety method vs the modern per-aspect
+table — is logged in `references/DISPUTED.md` §1.)*
 
-### Simplified Orb Table (Common Practice)
+**Example — Saturn–Venus aspect (Lilly's own worked example):**
+- Saturn's moiety: 5°00'  +  Venus's moiety: 4°00'  =  **9°00' combined orb**
+- They are in aspect (and can perfect) once within 9° of exact.
 
-| Aspect | Tight Orb | Standard Orb | Wide Orb |
-|--------|-----------|--------------|----------|
+**Example — Sun–Moon aspect:**
+- Sun 8°30' + Moon 6°15' = **14°45' combined orb** (the widest orbs in the chart, because the lights see far).
+
+### Simplified per-aspect table — a MODERN convenience, NOT Lilly's method
+
+The fixed-by-aspect orbs below are a 20th-century simplification; Lilly never used them. They are kept only as a
+quick rough check. **When they disagree with the moiety calculation, the moiety method wins** (it is the lineage
+this skill claims).
+
+| Aspect | Tight | "Standard" (modern) | Wide |
+|--------|-------|---------------------|------|
 | Conjunction | 3° | 8° | 10° |
 | Sextile | 2° | 4° | 6° |
 | Square | 3° | 6° | 8° |
 | Trine | 3° | 6° | 8° |
 | Opposition | 3° | 8° | 10° |
 
-**In Horary:** Tighter orbs carry more weight. An aspect at 1° orb is more significant than one at 7°.
+**In Horary:** tighter orbs carry more weight regardless of method — an aspect at 1° is far stronger than one at 7°. `scripts/dignities.py` computes aspect orbs by the moiety method.
 
 ---
 
