@@ -47,6 +47,10 @@ A planet in the sign it rules is **at home**. Maximum essential strength.
 
 **Note:** Traditional rulerships ONLY. Uranus, Neptune, Pluto are not used as primary rulers in horary.
 
+### Disposition / The Dispositor
+
+A planet is **disposed by** (is in the *disposition* of) the ruler of the sign it occupies; that ruler is its **dispositor**. Example: a planet in Aries is disposed by Mars (Mars rules Aries), so Mars is its dispositor and holds a measure of authority over how that planet can act — like a guest under a host's roof. Disposition chains can run several planets deep, sometimes ending in a **final dispositor** (a planet in its own sign that disposes a chain but is disposed by no one). In judgment, "what disposes the significator?" asks *who has power over this party* — a frequent move in legal and authority questions.
+
 ---
 
 ## III. Exaltation — +4 Points
@@ -80,7 +84,7 @@ The twelve signs group into four **triplicities** by element. Each triplicity ha
 | **Air** | Gemini, Libra, Aquarius | Saturn ♄ | Mercury ☿ | Jupiter ♃ |
 | **Water** | Cancer, Scorpio, Pisces | Venus ♀ | Mars ♂ | Moon ☽ |
 
-**Ptolemaic System (Alternative):**
+**Lilly's two-ruler system (the scheme Lilly used; he attributed it to Ptolemy):**
 
 | Element | Signs | Day Ruler | Night Ruler |
 |---------|-------|-----------|-------------|
@@ -88,6 +92,14 @@ The twelve signs group into four **triplicities** by element. Each triplicity ha
 | **Earth** | Taurus, Virgo, Capricorn | Venus ♀ | Moon ☽ |
 | **Air** | Gemini, Libra, Aquarius | Saturn ♄ | Mercury ☿ |
 | **Water** | Cancer, Scorpio, Pisces | Mars ♂ | Mars ♂ |
+
+> **Read the label carefully.** This is the two-ruler scheme **Lilly actually used** (*Christian Astrology*
+> p.102), which he credited to Ptolemy — a historically muddled attribution. Note the genuine anomaly: **Water
+> has no day/night split — Mars rules it in both sects.** This is not a transcription slip; it is the real
+> feature of the two-ruler scheme (Anthony Louis confirms). Do **not** "correct" Water to Venus/Moon — that
+> would be the Dorothean three-ruler reading above, a different system. The full dispute (Lilly's 2-ruler vs the
+> Dorothean 3-ruler the revival prefers, and which is "truly" Ptolemy) is logged in `references/DISPUTED.md` §4.
+> **The dignity scorer defaults to the Dorothean table above; this column is recorded for the Lilly lineage.**
 
 **Application:**
 - **Day chart** (Sun above horizon): Use day triplicity ruler
@@ -98,7 +110,13 @@ The twelve signs group into four **triplicities** by element. Each triplicity ha
 
 ## V. Terms (Bounds) — +2 Points
 
-Each sign is divided into five unequal segments, each ruled by a planet. The **Egyptian terms** (used by Lilly) are standard.
+Each sign is divided into five unequal segments, each ruled by a planet. The table below is the **Egyptian terms** — the dominant traditional/revival default, and the values verified cell-by-cell against Ptolemy's *Tetrabiblos* (all 60 boundaries correct).
+
+> **Attribution note (corrected).** It is commonly said that "Lilly used the Egyptian terms." This is backwards:
+> Lilly's *printed* table actually used **Ptolemy's revised terms** (Anthony Louis; *Medieval Astrology Guide*).
+> The Egyptian terms below are the *revival* standard (Lehman, Project Hindsight lineage), not Lilly's own table.
+> They are the better-attested and more common choice, so they remain the default here — but the table is
+> **Egyptian, not "Lilly's."** Full dispute in `references/DISPUTED.md` §3.
 
 ### Egyptian Terms Table
 
@@ -277,15 +295,18 @@ Always check all five dignities before declaring peregrine status.
 | Partile conjunction with Jupiter/Venus | +5 | Joined with benefics |
 | Partile trine Jupiter/Venus | +4 | Favorable aspect to benefics |
 | Partile sextile Jupiter/Venus | +3 | Opportunity from benefics |
-| Conjunct Regulus (29° Leo) | +6 | Royal fixed star |
-| Conjunct Spica (23° Libra) | +5 | Fortunate fixed star |
+| Direct ↔ see motion | — | (oriental/occidental below) |
+| Oriental (Saturn, Jupiter, Mars rising before Sun) | +2 | In sect / well-placed re: Sun |
+| Occidental (Venus, Mercury, Moon setting after Sun) | +2 | In sect / well-placed re: Sun |
+| Conjunct Regulus (≈0° Virgo, 2026) | +6 | Royal fixed star — **see precession note** |
+| Conjunct Spica (≈24° Libra, 2026) | +5 | Fortunate fixed star — **see precession note** |
 
 ### Accidental Debilities (Lilly's Point Values)
 
 | Factor | Points | Description |
 |--------|--------|-------------|
 | In 12th house | -5 | House of hidden enemies, sorrow |
-| In 8th or 6th house | -4 | Houses of death and illness |
+| In 8th or 6th house | -2 | Houses of death and illness (Lilly p.115 = **−2**; some modern adaptations use −4 — see DISPUTED.md) |
 | Retrograde | -5 | Moving backward |
 | Slow in motion | -2 | Slower than average |
 | Decreasing in light (Moon) | -2 | Waning toward new |
@@ -295,7 +316,17 @@ Always check all five dignities before declaring peregrine status.
 | Partile opposition Saturn/Mars | -4 | Opposed by malefics |
 | Partile square Saturn/Mars | -3 | Squared by malefics |
 | Besieged by Saturn and Mars | -5 | Trapped between malefics |
-| Conjunct Algol (26° Taurus) | -5 | Malefic fixed star |
+| Conjunct Algol (≈26° Taurus, 2026) | -5 | Malefic fixed star — **see precession note** |
+
+> **⚠ Precession note (do not freeze star longitudes).** Tropical fixed-star longitudes drift ~**1° per 72
+> years** (50.3″/yr). The values above are stamped for the **2026 epoch**. The earlier version of this file
+> hard-coded *"Regulus 29° Leo"* — but **Regulus crossed out of Leo into Virgo around 2011** and now sits at
+> ≈0°09′ Virgo; the old constant was wrong *by a whole sign*, so the +6 royal bonus would be awarded on the
+> wrong degree. **Best practice: compute the star's position for the chart's own date** via the Swiss Ephemeris
+> the skill already uses — `swe.fixstar2_ut("Regulus", jd)` returns the precessed tropical longitude (see
+> `scripts/dignities.py`, which does this). Use a tight orb (~5°, per Lilly). For reference, Lilly's own 1647
+> table read Regulus 24° Leo / Spica 18° Libra / Algol 20° Taurus — five degrees behind 1900, exactly as
+> precession predicts.
 
 ---
 
@@ -326,7 +357,17 @@ Always check all five dignities before declaring peregrine status.
 - They are visible in the evening sky
 
 **Application:**
-This distinction matters for planetary sect—whether a planet is suited to its position relative to the Sun adds or subtracts effectiveness.
+This distinction matters for planetary **sect** (defined next).
+
+### Sect (day/night fellowship)
+
+**Sect** is the division of the planets into two teams keyed to whether the chart is diurnal (Sun above the horizon) or nocturnal (Sun below it):
+
+- **Diurnal (day) sect:** Sun, Jupiter, Saturn
+- **Nocturnal (night) sect:** Moon, Venus, Mars
+- **Mercury:** variable — diurnal when oriental (rising before the Sun), nocturnal when occidental.
+
+A planet **"in sect"** (a day-sect planet in a day chart, a night-sect planet in a night chart) is reinforced — it behaves more according to its better nature; **out of sect**, it is somewhat undermined. Sect is *why* the oriental/occidental fortitude above is split the way it is. (Lilly leans more on dignity than on sect, so the skill treats sect as supporting testimony, not a primary score.)
 
 ---
 
@@ -378,6 +419,23 @@ A benefic (Jupiter, Venus) dignified does great good.
 A benefic debilitated does less good, may even harm through weakness.
 A malefic (Saturn, Mars) dignified does its work efficiently—which may be harmful.
 A malefic debilitated does its harm chaotically, unpredictably.
+
+---
+
+## XIII. The Part of Fortune (Pars Fortunae, ⊕)
+
+The **Part of Fortune** is the chief of the Arabic Parts (Lots) — a calculated point (not a body) marking where the Moon's relationship to the Sun falls relative to the Ascendant. It is invoked in money/resource questions (`QUESTION_TYPES.md`) as a secondary indicator of material fortune and flow.
+
+**Computation (sect-dependent — this is the part everyone gets wrong):**
+
+| Chart | Formula (by zodiacal longitude) |
+|-------|--------------------------------|
+| **Day chart** (Sun above horizon) | ⊕ = Ascendant + Moon − Sun |
+| **Night chart** (Sun below horizon) | ⊕ = Ascendant + Sun − Moon |
+
+Reduce the result modulo 360° to find its sign, degree, and house. (Many modern programs use the day formula for *both* sects — that is the common error; traditional horary reverses it by night.)
+
+**Reading it:** the sign and house of ⊕ show *where* fortune/resources flow and *what kind*; its dispositor and aspects show whether that flow is supported or blocked. It is supporting testimony, never the sole judge. Lilly also notes a small accidental fortitude for a significator conjunct or well-aspecting ⊕. `scripts/dignities.py` computes ⊕ for a given chart with the correct sect formula.
 
 ---
 

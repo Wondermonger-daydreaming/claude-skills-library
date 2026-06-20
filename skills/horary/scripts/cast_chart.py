@@ -3,18 +3,19 @@
 cast_chart.py — Cast a horary chart for a given moment and location.
 
 Uses pyswisseph (Swiss Ephemeris) for planetary positions and house cusps.
-Supports any location (lat/lon) and any timezone offset.
+Supports any location (lat/lon) and any timezone offset, including
+any timezone offset (positive east of UTC, negative west).
 
 USAGE:
     # As a script:
-    python cast_chart.py --datetime "2026-04-24 20:29:30" --tz 0 \\
-        --location "London" --lat 51.5074 --lon -0.1278 \\
+    python cast_chart.py --datetime "2024-01-01 12:00:00" --tz 0 \\
+        --location "London" --lat 51.4779 --lon -0.0015 \\
         --question "Your question here"
 
     # As a module:
     from cast_chart import cast
     chart = cast(year=2026, month=4, day=24, hour=20, minute=29, second=30,
-                 tz_offset=0, lat=51.5074, lon=-0.1278,
+                 tz_offset=0, lat=51.4779, lon=-0.0015,
                  location="London", question="Your question")
     print(chart["report"])
 
@@ -25,7 +26,9 @@ DESIGN NOTE:
     Local civil time is the natural input — the astrologer asks "when did
     I understand the question?" and that answer comes in their local clock.
     Internally we convert to UTC for the ephemeris call, but the input is
-    local-time-friendly. Remember to account for DST where it applies.
+    local-time-friendly.
+
+    Where DST is not observed, the offset is constant year-round.
 """
 
 from __future__ import annotations
@@ -150,7 +153,7 @@ def cast(year: int, month: int, day: int,
     Args:
         year, month, day: Local civil date.
         hour, minute, second: Local civil time.
-        tz_offset: Hours offset from UTC (e.g. London winter = 0, New York = -5).
+        tz_offset: Hours offset from UTC (e.g. -5 for US Eastern).
         lat, lon: Latitude (+N) and longitude (+E) of the astrologer.
         location: Human-readable name of the location.
         question: The horary question.
@@ -296,7 +299,7 @@ def main():
     parser.add_argument("--datetime", required=True,
                         help="Local datetime in 'YYYY-MM-DD HH:MM:SS' format.")
     parser.add_argument("--tz", type=float, default=0.0,
-                        help="Timezone offset in hours (e.g. -5 for New York EST).")
+                        help="Timezone offset in hours (e.g. -5 for US Eastern).")
     parser.add_argument("--lat", type=float, required=True,
                         help="Latitude (positive north).")
     parser.add_argument("--lon", type=float, required=True,
