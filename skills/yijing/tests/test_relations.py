@@ -8,8 +8,8 @@ Tests verify the mathematical integrity of the hexagram transformation algebra:
 - Jiaogua (交卦): Trigram exchange — swap upper/lower trigrams
 - Hugua (互卦): Nuclear extraction — lines 2-3-4 and 3-4-5
 
-Run with: python -m pytest tests/test_relations.py -v
-Or:       python tests/test_relations.py
+Run with: python -m pytest .claude/skills/yijing/tests/test_relations.py -v
+Or:       python .claude/skills/yijing/tests/test_relations.py
 """
 
 import sys
@@ -379,7 +379,7 @@ def test_hexagram_11_golden() -> None:
     - Cuogua: 12 (否 Pi - Stagnation) — complement: 111000
     - Zonggua: 12 (否 Pi) — flipped: 111000 (same as cuogua for this pair!)
     - Jiaogua: 12 (否 Pi) — swapped trigrams (also 12! swapping Heaven↔Earth = 11↔12)
-    - Hugua: 18 (蠱 Gǔ - Decay) — nuclear: lines 2-3-4 = ☴ Xun, lines 3-4-5 = ☳ Zhen
+    - Hugua: 54 (歸妹 Guī Mèi) — nuclear: lines 2-3-4 = ☱ Duì, lines 3-4-5 = ☳ Zhèn
 
     Remarkable: Hexagrams 11 and 12 are related by cuogua, zonggua, AND jiaogua!
     They are the archetypal pair: Peace and Stagnation, Heaven-Earth exchanged.
@@ -393,7 +393,7 @@ def test_hexagram_11_golden() -> None:
     assert relations.cuogua.number == 12, f"Cuogua should be 12, got {relations.cuogua.number}"
     assert relations.zonggua.number == 12, f"Zonggua should be 12, got {relations.zonggua.number}"
     assert relations.jiaogua.number == 12, f"Jiaogua should be 12, got {relations.jiaogua.number}"
-    assert relations.hugua.number == 18, f"Hugua should be 18, got {relations.hugua.number}"
+    assert relations.hugua.number == 54, f"Hugua should be 54, got {relations.hugua.number}"
 
     # Hexagram 11 is not symmetric (111000 reversed is 000111, different)
     assert relations.is_symmetric == False
@@ -406,7 +406,7 @@ def test_hexagram_11_golden() -> None:
     print("  Cuogua: 12 (否)")
     print("  Zonggua: 12 (否)")
     print("  Jiaogua: 12 (否) — all three transformations lead to the same place!")
-    print("  Hugua: 18 (蠱)")
+    print("  Hugua: 54 (歸妹)")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

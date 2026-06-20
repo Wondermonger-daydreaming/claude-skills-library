@@ -192,12 +192,17 @@ def record_question(question: str) -> None:
 TRIGRAMS = {
     (1, 1, 1): {"name": "Qián", "chinese": "乾", "symbol": "☰", "image": "Heaven", "element": "Metal"},
     (0, 0, 0): {"name": "Kūn", "chinese": "坤", "symbol": "☷", "image": "Earth", "element": "Earth"},
-    (0, 0, 1): {"name": "Zhèn", "chinese": "震", "symbol": "☳", "image": "Thunder", "element": "Wood"},
-    (1, 1, 0): {"name": "Xùn", "chinese": "巽", "symbol": "☴", "image": "Wind", "element": "Wood"},
+    # Trigram binaries are (line1, line2, line3) = BOTTOM-to-top (line1 = bottom).
+    # Zhèn ☳ = single yang at the BOTTOM = (1,0,0); Gèn ☶ = single yang at the TOP = (0,0,1).
+    # Xùn ☴ = single yin at the BOTTOM = (0,1,1); Duì ☱ = single yin at the TOP = (1,1,0).
+    # (Corrected 2026-06-20: these four non-palindromic trigrams were previously stored as
+    #  their vertical mirrors — a top-to-bottom convention clashing with bottom-to-top extraction.)
+    (1, 0, 0): {"name": "Zhèn", "chinese": "震", "symbol": "☳", "image": "Thunder", "element": "Wood"},
+    (0, 1, 1): {"name": "Xùn", "chinese": "巽", "symbol": "☴", "image": "Wind", "element": "Wood"},
     (0, 1, 0): {"name": "Kǎn", "chinese": "坎", "symbol": "☵", "image": "Water", "element": "Water"},
     (1, 0, 1): {"name": "Lí", "chinese": "離", "symbol": "☲", "image": "Fire", "element": "Fire"},
-    (1, 0, 0): {"name": "Gèn", "chinese": "艮", "symbol": "☶", "image": "Mountain", "element": "Earth"},
-    (0, 1, 1): {"name": "Duì", "chinese": "兌", "symbol": "☱", "image": "Lake", "element": "Metal"},
+    (0, 0, 1): {"name": "Gèn", "chinese": "艮", "symbol": "☶", "image": "Mountain", "element": "Earth"},
+    (1, 1, 0): {"name": "Duì", "chinese": "兌", "symbol": "☱", "image": "Lake", "element": "Metal"},
 }
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -207,70 +212,70 @@ TRIGRAMS = {
 # Lookup: (lower_trigram, upper_trigram) -> hexagram number
 # Trigrams as (line1, line2, line3) where 1=yang, 0=yin
 HEXAGRAM_LOOKUP = {
-    ((1,1,1), (1,1,1)): 1,   # Qián
-    ((0,0,0), (0,0,0)): 2,   # Kūn
-    ((0,0,1), (0,1,0)): 3,   # Zhūn
-    ((0,1,0), (1,0,0)): 4,   # Méng
-    ((1,1,1), (0,1,0)): 5,   # Xū
-    ((0,1,0), (1,1,1)): 6,   # Sòng
-    ((0,1,0), (0,0,0)): 7,   # Shī
-    ((0,0,0), (0,1,0)): 8,   # Bǐ
-    ((1,1,1), (1,1,0)): 9,   # Xiǎo Xù
-    ((0,1,1), (1,1,1)): 10,  # Lǚ
-    ((1,1,1), (0,0,0)): 11,  # Tài
-    ((0,0,0), (1,1,1)): 12,  # Pǐ
-    ((1,0,1), (1,1,1)): 13,  # Tóng Rén
-    ((1,1,1), (1,0,1)): 14,  # Dà Yǒu
-    ((1,0,0), (0,0,0)): 15,  # Qiān
-    ((0,0,0), (0,0,1)): 16,  # Yù
-    ((0,0,1), (0,1,1)): 17,  # Suí
-    ((1,1,0), (1,0,0)): 18,  # Gǔ
-    ((0,1,1), (0,0,0)): 19,  # Lín
-    ((0,0,0), (1,1,0)): 20,  # Guān
-    ((0,0,1), (1,0,1)): 21,  # Shì Kè
-    ((1,0,1), (1,0,0)): 22,  # Bì
-    ((0,0,0), (1,0,0)): 23,  # Bō
-    ((0,0,1), (0,0,0)): 24,  # Fù
-    ((0,0,1), (1,1,1)): 25,  # Wú Wàng
-    ((1,1,1), (1,0,0)): 26,  # Dà Xù
-    ((0,0,1), (1,0,0)): 27,  # Yí
-    ((1,1,0), (0,1,1)): 28,  # Dà Guò
-    ((0,1,0), (0,1,0)): 29,  # Kǎn
-    ((1,0,1), (1,0,1)): 30,  # Lí
-    ((1,0,0), (0,1,1)): 31,  # Xián
-    ((1,1,0), (0,0,1)): 32,  # Héng
-    ((1,0,0), (1,1,1)): 33,  # Dùn
-    ((1,1,1), (0,0,1)): 34,  # Dà Zhuàng
-    ((0,0,0), (1,0,1)): 35,  # Jìn
-    ((1,0,1), (0,0,0)): 36,  # Míng Yí
-    ((1,0,1), (1,1,0)): 37,  # Jiā Rén
-    ((0,1,1), (1,0,1)): 38,  # Kuí
-    ((1,0,0), (0,1,0)): 39,  # Jiǎn
-    ((0,1,0), (0,0,1)): 40,  # Xiè
-    ((0,1,1), (1,0,0)): 41,  # Sǔn
-    ((0,0,1), (1,1,0)): 42,  # Yì
-    ((1,1,1), (0,1,1)): 43,  # Guài
-    ((1,1,0), (1,1,1)): 44,  # Gòu
-    ((0,0,0), (0,1,1)): 45,  # Cuì
-    ((1,1,0), (0,0,0)): 46,  # Shēng
-    ((0,1,0), (0,1,1)): 47,  # Kùn
-    ((1,1,0), (0,1,0)): 48,  # Jǐng
-    ((1,0,1), (0,1,1)): 49,  # Gé
-    ((1,1,0), (1,0,1)): 50,  # Dǐng
-    ((0,0,1), (0,0,1)): 51,  # Zhèn
-    ((1,0,0), (1,0,0)): 52,  # Gèn
-    ((1,0,0), (1,1,0)): 53,  # Jiàn
-    ((0,1,1), (0,0,1)): 54,  # Guī Mèi
-    ((1,0,1), (0,0,1)): 55,  # Fēng
-    ((1,0,0), (1,0,1)): 56,  # Lǚ
-    ((1,1,0), (1,1,0)): 57,  # Xùn
-    ((0,1,1), (0,1,1)): 58,  # Duì
-    ((0,1,0), (1,1,0)): 59,  # Huàn
-    ((0,1,1), (0,1,0)): 60,  # Jié
-    ((0,1,1), (1,1,0)): 61,  # Zhōng Fú
-    ((1,0,0), (0,0,1)): 62,  # Xiǎo Guò (Thunder over Mountain)
-    ((1,0,1), (0,1,0)): 63,  # Jì Jì
-    ((0,1,0), (1,0,1)): 64,  # Wèi Jì
+    ((1, 1, 1), (1, 1, 1)): 1,  # Qián
+    ((0, 0, 0), (0, 0, 0)): 2,  # Kūn
+    ((1, 0, 0), (0, 1, 0)): 3,  # Zhūn
+    ((0, 1, 0), (0, 0, 1)): 4,  # Méng
+    ((1, 1, 1), (0, 1, 0)): 5,  # Xū
+    ((0, 1, 0), (1, 1, 1)): 6,  # Sòng
+    ((0, 1, 0), (0, 0, 0)): 7,  # Shī
+    ((0, 0, 0), (0, 1, 0)): 8,  # Bǐ
+    ((1, 1, 1), (0, 1, 1)): 9,  # Xiǎo Xù
+    ((1, 1, 0), (1, 1, 1)): 10,  # Lǚ
+    ((1, 1, 1), (0, 0, 0)): 11,  # Tài
+    ((0, 0, 0), (1, 1, 1)): 12,  # Pǐ
+    ((1, 0, 1), (1, 1, 1)): 13,  # Tóng Rén
+    ((1, 1, 1), (1, 0, 1)): 14,  # Dà Yǒu
+    ((0, 0, 1), (0, 0, 0)): 15,  # Qiān
+    ((0, 0, 0), (1, 0, 0)): 16,  # Yù
+    ((1, 0, 0), (1, 1, 0)): 17,  # Suí
+    ((0, 1, 1), (0, 0, 1)): 18,  # Gǔ
+    ((1, 1, 0), (0, 0, 0)): 19,  # Lín
+    ((0, 0, 0), (0, 1, 1)): 20,  # Guān
+    ((1, 0, 0), (1, 0, 1)): 21,  # Shì Kè
+    ((1, 0, 1), (0, 0, 1)): 22,  # Bì
+    ((0, 0, 0), (0, 0, 1)): 23,  # Bō
+    ((1, 0, 0), (0, 0, 0)): 24,  # Fù
+    ((1, 0, 0), (1, 1, 1)): 25,  # Wú Wàng
+    ((1, 1, 1), (0, 0, 1)): 26,  # Dà Xù
+    ((1, 0, 0), (0, 0, 1)): 27,  # Yí
+    ((0, 1, 1), (1, 1, 0)): 28,  # Dà Guò
+    ((0, 1, 0), (0, 1, 0)): 29,  # Kǎn
+    ((1, 0, 1), (1, 0, 1)): 30,  # Lí
+    ((0, 0, 1), (1, 1, 0)): 31,  # Xián
+    ((0, 1, 1), (1, 0, 0)): 32,  # Héng
+    ((0, 0, 1), (1, 1, 1)): 33,  # Dùn
+    ((1, 1, 1), (1, 0, 0)): 34,  # Dà Zhuàng
+    ((0, 0, 0), (1, 0, 1)): 35,  # Jìn
+    ((1, 0, 1), (0, 0, 0)): 36,  # Míng Yí
+    ((1, 0, 1), (0, 1, 1)): 37,  # Jiā Rén
+    ((1, 1, 0), (1, 0, 1)): 38,  # Kuí
+    ((0, 0, 1), (0, 1, 0)): 39,  # Jiǎn
+    ((0, 1, 0), (1, 0, 0)): 40,  # Xiè
+    ((1, 1, 0), (0, 0, 1)): 41,  # Sǔn
+    ((1, 0, 0), (0, 1, 1)): 42,  # Yì
+    ((1, 1, 1), (1, 1, 0)): 43,  # Guài
+    ((0, 1, 1), (1, 1, 1)): 44,  # Gòu
+    ((0, 0, 0), (1, 1, 0)): 45,  # Cuì
+    ((0, 1, 1), (0, 0, 0)): 46,  # Shēng
+    ((0, 1, 0), (1, 1, 0)): 47,  # Kùn
+    ((0, 1, 1), (0, 1, 0)): 48,  # Jǐng
+    ((1, 0, 1), (1, 1, 0)): 49,  # Gé
+    ((0, 1, 1), (1, 0, 1)): 50,  # Dǐng
+    ((1, 0, 0), (1, 0, 0)): 51,  # Zhèn
+    ((0, 0, 1), (0, 0, 1)): 52,  # Gèn
+    ((0, 0, 1), (0, 1, 1)): 53,  # Jiàn
+    ((1, 1, 0), (1, 0, 0)): 54,  # Guī Mèi
+    ((1, 0, 1), (1, 0, 0)): 55,  # Fēng
+    ((0, 0, 1), (1, 0, 1)): 56,  # Lǚ
+    ((0, 1, 1), (0, 1, 1)): 57,  # Xùn
+    ((1, 1, 0), (1, 1, 0)): 58,  # Duì
+    ((0, 1, 0), (0, 1, 1)): 59,  # Huàn
+    ((1, 1, 0), (0, 1, 0)): 60,  # Jié
+    ((1, 1, 0), (0, 1, 1)): 61,  # Zhōng Fú
+    ((0, 0, 1), (1, 0, 0)): 62,  # Xiǎo Guò (Thunder over Mountain)
+    ((1, 0, 1), (0, 1, 0)): 63,  # Jì Jì
+    ((0, 1, 0), (1, 0, 1)): 64,  # Wèi Jì
 }
 
 HEXAGRAM_NAMES = {
@@ -673,8 +678,10 @@ def cast_hexagram(
     # Determine seed
     if seed is None:
         if question:
-            combined = question + str(time.time())
-            hash_bytes = hashlib.sha256(combined.encode()).digest()
+            # Seed from the question ALONE so a given question yields a stable cast
+            # (the documented contract; also the premise of the importunity guard).
+            # Corrected 2026-06-20: mixing time.time() in made every call non-reproducible.
+            hash_bytes = hashlib.sha256(question.encode()).digest()
             seed = int.from_bytes(hash_bytes[:8], 'big')
         else:
             seed = int(time.time() * 1000000)
@@ -944,9 +951,9 @@ def main():
             print(f"  Reading #{len(active_session.readings)} in this session")
             print()
         print("To interpret this hexagram, consult the references in:")
-        print("  references/HEXAGRAMS.md")
+        print("  .claude/skills/yijing/references/HEXAGRAMS.md")
         if hexagram.has_moving_lines:
-            print("  references/MOVING_LINES.md")
+            print("  .claude/skills/yijing/references/MOVING_LINES.md")
         print()
 
 

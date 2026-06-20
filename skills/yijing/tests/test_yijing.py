@@ -5,8 +5,8 @@ Yijing Oracle Test Suite
 An oracle without tests is epistemologically fragile.
 These tests verify the mathematical integrity of the casting system.
 
-Run with: python -m pytest tests/test_yijing.py -v
-Or:       python tests/test_yijing.py
+Run with: python -m pytest .claude/skills/yijing/tests/test_yijing.py -v
+Or:       python .claude/skills/yijing/tests/test_yijing.py
 
 Tests verify:
 1. Probability distributions match cosmological specifications
@@ -260,15 +260,17 @@ def test_hexagram_names_complete() -> None:
 
 def test_trigram_lookup_complete() -> None:
     """Verify that all 8 trigrams are defined."""
+    # Binaries are bottom-to-top (line1 = bottom). Comments corrected 2026-06-20:
+    # the previous comments mirror-labeled the four non-palindromic trigrams.
     expected_trigrams = [
         (1, 1, 1),  # Qián
         (0, 0, 0),  # Kūn
-        (0, 0, 1),  # Zhèn
-        (1, 1, 0),  # Xùn
+        (1, 0, 0),  # Zhèn  (single yang at bottom)
+        (0, 1, 1),  # Xùn   (single yin at bottom)
         (0, 1, 0),  # Kǎn
         (1, 0, 1),  # Lí
-        (1, 0, 0),  # Gèn
-        (0, 1, 1),  # Duì
+        (0, 0, 1),  # Gèn   (single yang at top)
+        (1, 1, 0),  # Duì   (single yin at top)
     ]
 
     for trigram in expected_trigrams:
@@ -288,29 +290,33 @@ def test_trigram_lookup_complete() -> None:
 # These are pre-computed canonical casts that must remain stable.
 # If these fail, the oracle's bones have shifted.
 
+# Regenerated 2026-06-20 after the trigram-orientation fix. Each number is
+# double-confirmed against an independent first-principles King Wen oracle
+# (see test_orientation_regression.py) — NOT re-frozen from the engine.
+# The line-values were always correct; only the (mirror-)numbers were wrong.
 GOLDEN_READINGS = {
-    # Seed 42 with yarrow method → Hexagram 27 (Nourishment)
+    # Seed 42, yarrow → b2t 001100 = Gèn below, Zhèn above → Hexagram 62 (小過 Xiǎo Guò)
     ("yarrow", 42): {
-        "number": 27,
-        "name_pinyin": "Yí",
+        "number": 62,
+        "name_pinyin": "Xiǎo Guò",
         "lines": [8, 6, 7, 7, 8, 8],
     },
-    # Seed 12345 with yarrow method → Hexagram 25 (Innocence)
+    # Seed 12345, yarrow → b2t 001111 = Gèn below, Qián above → Hexagram 33 (遯 Dùn)
     ("yarrow", 12345): {
-        "number": 25,
-        "name_pinyin": "Wú Wàng",
+        "number": 33,
+        "name_pinyin": "Dùn",
         "lines": [8, 6, 9, 7, 7, 7],
     },
-    # Seed 42 with coins method → Hexagram 27 (same seed, different method, same result here)
+    # Seed 42, coins → same lines as yarrow/42 → Hexagram 62 (小過 Xiǎo Guò)
     ("coins", 42): {
-        "number": 27,
-        "name_pinyin": "Yí",
+        "number": 62,
+        "name_pinyin": "Xiǎo Guò",
         "lines": [8, 6, 7, 7, 8, 8],
     },
-    # Seed 999 with yarrow → Hexagram 54 (Marrying Maiden)
+    # Seed 999, yarrow → b2t 011001 = Xùn below, Gèn above → Hexagram 18 (蠱 Gǔ)
     ("yarrow", 999): {
-        "number": 54,
-        "name_pinyin": "Guī Mèi",
+        "number": 18,
+        "name_pinyin": "Gǔ",
         "lines": [8, 7, 9, 8, 8, 7],
     },
 }

@@ -392,6 +392,7 @@ class ConsultationSession:
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'ConsultationSession':
         """Deserialize from JSON storage."""
+        data = dict(data)  # shallow copy: never mutate the caller's dict (pop below)
         readings_data = data.pop("readings", [])
         session = cls(**data)
         session.readings = [

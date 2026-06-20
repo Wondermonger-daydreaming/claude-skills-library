@@ -8,8 +8,8 @@ Tests verify the session persistence and pattern detection systems:
 - Pattern analysis across multiple readings
 - Session state transitions
 
-Run with: python -m pytest tests/test_session.py -v
-Or:       python tests/test_session.py
+Run with: python -m pytest .claude/skills/yijing/tests/test_session.py -v
+Or:       python .claude/skills/yijing/tests/test_session.py
 """
 
 import json

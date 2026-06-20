@@ -261,9 +261,9 @@ def cast_hexagram_coins(question: str, salt: str = "") -> list[int]:
 
 ```bash
 # Using the skill's script
-python3 scripts/cast_hexagram.py "Should I change jobs?"
-python3 scripts/cast_hexagram.py --method yarrow "What is the nature of this situation?"
-python3 scripts/cast_hexagram.py --method coins "Will the project succeed?"
+python3 .claude/skills/yijing/scripts/cast_hexagram.py "Should I change jobs?"
+python3 .claude/skills/yijing/scripts/cast_hexagram.py --method yarrow "What is the nature of this situation?"
+python3 .claude/skills/yijing/scripts/cast_hexagram.py --method coins "Will the project succeed?"
 ```
 
 ---
