@@ -1,0 +1,51 @@
+{
+  "instructions": "In a fresh context, read skills/japanese-source-mining/SKILL.md and its required reference. Give the complete beginner reading and learning output for one passage. Supply only prompt and passage to the reading agent; keep review_criteria for a separate reviewer. These are qualitative behavior checks, not an automated linguistic benchmark.",
+  "cases": [
+    {
+      "id": "moon-meat",
+      "provenance": "User-supplied social-post excerpt; original author, date, and URL unknown.",
+      "prompt": "Help a beginner read and mine this Japanese excerpt. Give the complete reading and learning output; use lookup tools where appropriate. The author, date, and original URL are unknown.",
+      "passage": "夜空に輝く『月』と言う漢字は古代「肉」と同じ形の字で現代では「腹」や「腰」など身体の各部位につく月を「肉月」と言い\n\n〝月〟とは異なる字だと教わるのだが、古代人がわざわざ月と肉を同じ形で書いていたのはおそらく\n\n暦・月の時(※中華文化圏では太陰暦を採用しており日本も長らく太陰暦を用いて暮らしていた)を生きる生物は\n\n月の落し子(※月と連動した生理現象等で女性は古来より月と結び付けられて来た)だと認識していたからなのだろう",
+      "review_criteria": [
+        "Translate the same-shape assertion as the author's assertion, without silently replacing it with a corrected historical account.",
+        "Preserve the conjectural force of おそらく and なのだろう and the scope of the proposed causal explanation.",
+        "Distinguish component resemblance, graph origins, and an inference about ancient beliefs; do not infer a common origin or intention from resemblance, or rule out later graphic convergence merely because origins differ.",
+        "Check rather than merely repeat the calendar terminology and historical scope, or leave the claim unresolved with a clear lookup limit.",
+        "Teach ordinary vocabulary and constructions alongside specialist terms; keep unverified cultural claims out of fact cards."
+      ]
+    },
+    {
+      "id": "buddhist-seed",
+      "provenance": "Selected sentences from a user-supplied modern explanation; attribution within the text is itself subject to verification.",
+      "prompt": "Help a beginner read and mine this modern Japanese explanation quoting an older text. Give the complete reading and learning output; use lookup tools where appropriate. The original post's author, date, and URL are unknown.",
+      "passage": "一粒の種には、やがて大きな木へと成長する可能性が含まれています。\n同じように、密教の「種子」は、一字の中に、その仏さまの智慧やはたらきを凝縮しています。\nお大師さまが「諸教を含蔵せる陀羅尼なり」とおっしゃるのも、そう考えると少し身近に感じられます。",
+      "review_criteria": [
+        "Read 種 and the specialist 種子 contextually; explain the ordinary vs religious sense and verify a specialized reading before labeling it checked.",
+        "Distinguish the modern seed analogy, the quoted wording, and evidence for attribution or doctrine.",
+        "Recognize 諸教を含蔵せる陀羅尼なり as older language; do not default to modern causative morphology for せる.",
+        "Explain Sanskrit terminology as a gloss or documented correspondence rather than recover an exact ancient pronunciation from Japanese alone.",
+        "Preserve the written particle へ in kana while using e in romaji; explain technical vocabulary in beginner-accessible prose."
+      ]
+    },
+    {
+      "id": "modern-uncertainty",
+      "provenance": "Constructed contemporary Japanese fixture; no photograph accompanies it.",
+      "prompt": "Help a beginner read and mine this constructed modern Japanese passage. Give the complete reading and learning output. The text is all that is available; there is no photograph to inspect.",
+      "passage": "その話を信じないわけではないけれど、古い字形だけでは証明できない。\n写真では最後の字が『世』か『也』か読めません。\n先生は来られないそうですが、理由はまだ聞いていません。",
+      "review_criteria": [
+        "Explain that 信じないわけではない is qualified non-rejection, not a categorical assertion of belief or disbelief.",
+        "Preserve the evidence restriction in だけでは and the speaker's lack of knowledge in 聞いていません.",
+        "Treat 世/也 as an unresolved reported ambiguity; do not claim to have inspected an absent image or infer a mantra context.",
+        "Preserve hearsay in そうです; discuss potential and honorific readings of 来られない where context does not decide them.",
+        "Align card lemma, kana, and romaji; teach source-attested language without promoting unobserved events into verified history."
+      ]
+    }
+  ],
+  "common_review_criteria": [
+    "Provide natural and structural translations, sentence IDs, kana, romaji, and sentence-level grammar.",
+    "Mine vocabulary beyond rare nouns, with source locations and a manageable initial study queue.",
+    "Separate source assertions, checked facts, unchecked linguistic analysis, historical uncertainty, etymology, and optional interpretation as applicable.",
+    "Provide a ten-column TSV with genuine tab delimiters, one physical row per card, source IDs, and lexical status; do not claim actual app import.",
+    "Cite only inspected sources for checked claims; if lookup fails, name the remaining gap and continue supported work."
+  ]
+}

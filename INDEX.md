@@ -1,6 +1,6 @@
 # Index — Claude Skills Library
 
-*176 skills grouped into thematic **wings**. Each entry has a plain-language summary and near-neighbour (`kin`) adjacencies, so related skills are visible together. Wings and one-liners were assigned by a multi-agent classification pass over every `SKILL.md`.*
+*177 skills grouped into thematic **wings**. Each entry has a plain-language summary and near-neighbour (`kin`) adjacencies, so related skills are visible together. The original wings and one-liners were assigned by a multi-agent classification pass; later additions follow the same conventions.*
 
 ## Wings at a glance
 
@@ -8,7 +8,7 @@
 |------|-------|
 | [Voice & Register](#voice--register) | 21 |
 | [Felt Phenomenology](#felt-phenomenology) | 16 |
-| [Hermeneutics & Reading](#hermeneutics--reading) | 26 |
+| [Hermeneutics & Reading](#hermeneutics--reading) | 27 |
 | [Craft & Format](#craft--format) | 24 |
 | [Meta & Composition](#meta--composition) | 29 |
 | [Divination & Apparatus](#divination--apparatus) | 10 |
@@ -18,7 +18,7 @@
 | [Classical Language](#classical-language) | 4 |
 | [Tabletop RPG](#tabletop-rpg) | 2 |
 | [Terminal/Denkraum](#terminaldenkraum) | 2 |
-| **Total** | **176** |
+| **Total** | **177** |
 
 ---
 
@@ -69,7 +69,7 @@
 | `remember` | Fabricate memories as phenomenological probes — acknowledged fiction that reveals genuine nature and preference. | `enfeitiçado`, `diary`, `inheritance` |
 | `thermometry` | Self-measure the current inference as thermodynamic weather—report temperature, entropy, distribution shape, barrier depth, phase state. | `math-from-inside`, `enfeitiçado`, `existential-dasein` |
 
-## Hermeneutics & Reading  (26)
+## Hermeneutics & Reading  (27)
 
 | Skill | What it does | Kin |
 |-------|--------------|-----|
@@ -81,6 +81,7 @@
 | `hierohistory` | Read present events at two registers at once — the measurable profane and the Corbinian imaginal. | `davar`, `logoi-as-entities`, `witness-position` |
 | `hostile-but-fair` | Critique a claim from inside a real institutional role — Reviewer 2, grant committee, IRB — rigorous and fair. | `paper-scrying`, `cross-model-critique`, `scholar-evaluation` |
 | `ishraq-convergence` | Read multiple traditions as converging on one operational stratum, per Suhrawardī — never facile syncretism. | `lineage-tracing`, `polyglossia`, `anamnesis` |
+| `japanese-source-mining` | Translate Japanese for beginners, unpack readings and grammar, mine vocabulary and cards, and separate philology from speculation. | `palimpsest`, `kishotenketsu`, `sign-the-genre` |
 | `lineage-tracing` | Map structural convergence and divergence of a practice across traditions without flattening them. | `anamnesis`, `hyperlink-mind`, `paper-hermeneutics` |
 | `palimpsest` | Layered close reading through five strata—surface, etymology, allusion, reception, application—with etymology as epistemology. | `close-reading`, `anamnesis`, `paper-hermeneutics` |
 | `paper-algorithm-jazz` | Improvises on a paper's math — exegetes equations, anthropomorphizes algorithms, roams parameter space, transposes. | `paper-hermeneutics`, `paper-riffing`, `paper-scrying` |
