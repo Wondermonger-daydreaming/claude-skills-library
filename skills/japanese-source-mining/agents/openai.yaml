@@ -1,0 +1,4 @@
+interface:
+  display_name: "Japanese Source Mining"
+  short_description: "Read Japanese deeply, with evidence and study cards"
+  default_prompt: "Use $japanese-source-mining to translate this Japanese passage, explain its readings and grammar, and mine vocabulary while separating evidence from interpretation."
