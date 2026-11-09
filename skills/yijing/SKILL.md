@@ -311,6 +311,7 @@ Detailed materials in `references/`:
 - **INTERPRETATION_GUIDE.md** — Hermeneutic methodology
 - **INTERPRETATION_PROTOCOL.md** — Step-by-step reading protocol
 - **NA_JIA.md** — The 納甲筮法 / 文王卦 / 六爻 apparatus: Eight Palaces, Na Jia stem-branch assignment, Five Elements per line, the Six Relatives, and the World/Response lines. **Now executable via `na_jia.py`.**
+- For comparison with Lilly's horary, the [horary–Na Jia crosswalk](../horary/references/HORARY_NA_JIA.md) follows one promotion question through both procedures.
 
 ## Scripts
 
