@@ -6,6 +6,8 @@
 
 ---
 
+For a comparison with Lilly's astrology and a later check of the received *Jīngshì Yìzhuàn*, see the [horary–Na Jia crosswalk](../../horary/references/HORARY_NA_JIA.md).
+
 ## 0. Orientation — what this fixes
 
 The `yijing` SKILL.md *invokes* the full Wen Wang Gua (文王卦 Wén Wáng Guà, "King Wen's Hexagram[-divination]") framework — Na Jia (納甲), the Six Relatives (六親 / 六亲 liù qīn), palace positions (八宮 bā gōng), and the Shi-Ying world/response lines (世應 shì yìng) — in §III, in the operating instructions (~ll. 484–489, 544–571, 741–753), and in the "Operationalized Yijing Template." None of it was defined anywhere in `references/`. This file defines it.

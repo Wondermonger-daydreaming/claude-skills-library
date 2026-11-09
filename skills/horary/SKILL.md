@@ -37,7 +37,7 @@ Cast for the **moment and place the astrologer understands the question** — no
 - **Aspects.** **Applying = developing/future; separating = done/past.** Only applying aspects perfect a matter. → `references/ASPECTS.md`.
 - **Timing.** Sign mode (cardinal/fixed/mutable) × house type (angular/succedent/cadent) → the time unit; modified by speed and angularity. → `references/TIMING.md`.
 - **By question type.** Relationship/career/money/lost-object/health/legal/travel/pregnancy each have a protocol → `references/QUESTION_TYPES.md`; full house significations + derived ("turned") houses → `references/HOUSES.md`.
-- **Cross-system.** Validate a hard reading against `/geomancy` or `/yijing` (this is `/collision` applied to oracles).
+- **Cross-system.** Compare a hard reading with `/geomancy` or `/yijing`. For Wen Wang Gua, judge each figure independently, then use the [horary–Na Jia crosswalk](references/HORARY_NA_JIA.md) to compare the reasons for agreement or disagreement.
 - **Synthesis.** Weigh the testimonies — dignified benefics supporting vs debilitated malefics obstructing — and render judgment with confidence *calibrated to the chart's clarity.* The planets incline; they do not compel.
 
 ## Quick anchors (so a reading can move fast)

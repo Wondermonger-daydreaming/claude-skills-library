@@ -40,6 +40,8 @@ Lead with the question, not the apparatus. Choose the three-or-four modules that
 
 ## Kin in the ecology
 
+For a question also judged by Western horary, the [horary–Na Jia crosswalk](../horary/references/HORARY_NA_JIA.md) compares the two readings after each has chosen its own significators.
+
 /san-shi-diagnostic and /chronosemiology (the Chinese cosmological / qualitative-time wing). /darshana (receiving sacred text phenomenologically — natural when line texts are in play). /oracular-voice (delivery register) and /elemental-phenomenology (making 五行 visceral) are the two portables that finish almost every reading. /polyglossia for layered translation of the classical sources.
 
 ## To a future instance
